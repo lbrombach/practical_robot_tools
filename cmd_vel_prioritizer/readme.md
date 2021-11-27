@@ -13,7 +13,7 @@ This could, for example, allow teleop commands to override autonomously issued c
 
 ## Usage:
 With a topic name parameter and a delay parameter for each topic, it is easier to use a launch file than to rosrun from the command line. See the cmd_vel_prioritizer.launch for an example/template.
-<br> 
+<br><br>
 
 ## Subscriptions
 - topic1 (default: teleop/cmd_vel) ([geometry_msgs/Twist](http://docs.ros.org/en/melodic/api/geometry_msgs/html/msg/Twist.html))
@@ -28,13 +28,13 @@ With a topic name parameter and a delay parameter for each topic, it is easier t
 - topic4 (default: "move_base/cmd_vel") ([geometry_msgs/Twist](http://docs.ros.org/en/melodic/api/geometry_msgs/html/msg/Twist.html))
     - The lowest priority topic
     
-<br><br> 
+<br>
 
 ## Publications
 - output_topic (default: "cmd_vel") ([geometry_msgs/Twist](http://docs.ros.org/en/melodic/api/geometry_msgs/html/msg/Twist.html))
     - The topic that gets republished
 
-<br><br> 
+<br>
 
 ## Parameters
 - output_topic (string, default: cmd_vel)
@@ -63,4 +63,12 @@ With a topic name parameter and a delay parameter for each topic, it is easier t
     
 - input4_locktime (double, default: 0.2)
     - Not relevant because topic4 is the lowest priority topic
+
+<br><br>
+
+## Contributing, bug reports, etc:
+Please use the issues and bug reporting system for bugs and feature requests. With many projects, a job, a family, I can't promise
+to get to feature requests very quickly, but am definitely listening for feedback to make improvement and will prioritize bugs. I am open to
+pull requests if you'd like to contribute. I can be contacted by email at lbrombach2@gmail.com. 
+
 

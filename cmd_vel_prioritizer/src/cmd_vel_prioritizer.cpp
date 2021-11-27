@@ -85,7 +85,7 @@ int main(int argc, char **argv)
 	double lockTime = .2;
 	std::string outputTopic, topic1, topic2, topic3, topic4;
 	ros::param::param<double>("/cmd_vel_prioritizer/pub_frequency", frequency, 30.0);
-	ros::param::param<std::string>("/cmd_vel_prioritizer/output_topic", outputTopic, "/cmd_vel");
+	ros::param::param<std::string>("/cmd_vel_prioritizer/output_topic", outputTopic, "cmd_vel");
 	ros::param::param<std::string>("/cmd_vel_prioritizer/input_topic1", topic1, "teleop/cmd_vel");
 	ros::param::param<std::string>("/cmd_vel_prioritizer/input_topic2", topic2, "none");
 	ros::param::param<std::string>("/cmd_vel_prioritizer/input_topic3", topic3, "none");

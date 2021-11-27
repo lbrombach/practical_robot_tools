@@ -20,25 +20,38 @@ The rplidar_node does provide services to start and stop the motor, but manually
 4. Now start rviz with rosrun rviz rviz and in a moment you should see an output on the screen the turret should start.
 5. Add the rplidar_node and the rplidar_motor_control to a launch file that happens whenever the robot is on. Congrats - your RPLidar motor is now automated.
 
+<br>
 
 ## Connections:
 Uses the std_srvs/Empty motor_start and std_srvs/Empty motor_stop services as provided by the [rplidar_node](http://wiki.ros.org/rplidar) or any other node with those topic names.
+
+<br>
 
 ## Subscriptions
 - scan ([sensor_msgs/LaserScan](http://docs.ros.org/en/api/sensor_msgs/html/msg/LaserScan.html))
     - The laser scan message published by the RPLidar you wish to control
 
+<br>
+
 ## Publications
 none
 
+<br>
+
 ## Parameters
-- rplidar_motor_controller/topic_name (string, default: scan)
+- topic_name (string, default: scan)
     - Sets the scan subscriber to this parameter
 
-- rplidar_motor_controller/node1 (string, default: rviz)
+- node1 (string, default: rviz)
     - The name of first of two nodes to check for
 
-- rplidar_motor_controller/node2 (string, default: move_base)
+- node2 (string, default: move_base)
     - The name of second of two nodes to check for
 
+<br><br>
+
+## Contributing, bug reports, etc:
+Please use the issues and bug reporting system for bugs and feature requests. With many projects, a job, a family, I can't promise
+to get to feature requests very quickly, but am definitely listening for feedback to make improvement and will prioritize bugs. I am open to
+pull requests if you'd like to contribute. I can be contacted by email at lbrombach2@gmail.com. 
 
