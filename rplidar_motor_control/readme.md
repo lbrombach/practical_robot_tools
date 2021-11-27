@@ -1,5 +1,6 @@
 # rplidar_motor_control
-A utility node to control the rplidar's motor by calling the rplidar_node services /stop_motor or /start_motor based upon whether or not certain other nodes are running. Part of the practical_robot_utils collection at https://github.com/lbrombach/practical_robot_tools.git.
+A utility node to control the rplidar's motor by calling the rplidar_node services /stop_motor or /start_motor based upon whether or not certain other nodes are running. Part of the [practical_robot_utils](../README.md) collection at https://github.com/lbrombach/practical_robot_tools.git <br> 
+
 
 Author: Lloyd Brombach <br> 
 lbrombach2@gmail.com  <br> 

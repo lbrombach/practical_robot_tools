@@ -1,5 +1,5 @@
 # cmd_vel_prioritizer
-A utility node to allow different geometry_msgs::Twist messages to have different priorities. <br> 
+A utility node to allow different geometry_msgs::Twist messages to have different priorities. Part of the [practical_robot_utils](../README.md) collection at https://github.com/lbrombach/practical_robot_tools.git <br> 
 Author: Lloyd Brombach <br> 
 lbrombach2@gmail.com  <br> 
 November 2021
