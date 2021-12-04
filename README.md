@@ -1,5 +1,5 @@
 # practical_robot_tools
-A collection of ROS packages to handle miscellaneous robot tasks and system management. If you are a reader of my book Practical Robotics in C++, you will almost certainly find some useful tools here as example for how to code some things we didn't get to cover in the book. 
+A collection of ROS packages and Arduino programs to handle miscellaneous robot tasks and system management. If you are a reader of my book Practical Robotics in C++, you will almost certainly find some useful tools here as example for how to code some things we didn't get to cover in the book. 
 
 
  
@@ -23,6 +23,9 @@ catkin_make <br>
 The RPLidar's motor is always running by default. This node allows for the automatic starting and stopping of the RPLidar motor when certain nodes are started or stopped (Default are rviz and move_base, but user-settable). See documentation here: [rplidar_motor_control](rplidar_motor_control/readme.md)
 
 <br><hr>
+
+## encoder_tick_pub (Arduino):
+encoder_tick_pub.ino is a ROS (Robot Operating System) publisher node that runs on and publishes an std_msgs::Int16 (-32,768 to 32,767) wheel encoder ticks for both left and right wheels. Tested on arduino nano every. 
 
 ## cmd_vel_prioritizer:
 A utility node to allow different geometry_msgs::Twist messages to have different priorities. If two or more are published at the same time, only the message with the highest priority is republished in order to avoid two node "fighting" for control of the robot. See documentation here: [cmd_vel_prioritizer](cmd_vel_prioritizer/readme.md)
