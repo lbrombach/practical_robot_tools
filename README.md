@@ -24,8 +24,12 @@ The RPLidar's motor is always running by default. This node allows for the autom
 
 <br><hr>
 
+## arduino_ros_relay_control
+This is a pair of programs that facilitate the control of relays for a ROS (Robot Operating System) robot via an Arduino. See [arduino_ros_relay_control](./arduino_ros_relay_control/README.md)
+
+
 ## encoder_tick_pub (Arduino):
-encoder_tick_pub.ino is a ROS (Robot Operating System) publisher node that runs on and publishes an std_msgs::Int16 (-32,768 to 32,767) wheel encoder ticks for both left and right wheels. Tested on arduino nano every. 
+encoder_tick_pub.ino is a ROS (Robot Operating System) publisher node that runs on an Arduino and publishes an std_msgs::Int16 (-32,768 to 32,767) wheel encoder ticks for both left and right wheels. Works with quadrature encoders. See [quadrature_encoder_tick_pub](/arduino_code/quadrature_encoder_tick_pub/readme.md)
 
 ## cmd_vel_prioritizer:
 A utility node to allow different geometry_msgs::Twist messages to have different priorities. If two or more are published at the same time, only the message with the highest priority is republished in order to avoid two node "fighting" for control of the robot. See documentation here: [cmd_vel_prioritizer](cmd_vel_prioritizer/readme.md)
