@@ -34,10 +34,10 @@ It is the job of this node to publish boolean messages that indicate whether a g
 <br>
 
 **Subscribes**
-- topic1 /hoverboard_velocity_controller/cmd_vel ([geometry_msgs::Twist](http://docs.ros.org/en/api/geometry_msgs/html/msg/Twist.html)) <br> 
+- topic1 default: /hoverboard_velocity_controller/cmd_vel ([geometry_msgs::Twist](http://docs.ros.org/en/api/geometry_msgs/html/msg/Twist.html)) <br> 
     The hard-coded hoverboardTopic topic. Used to determine if the system requires the hoverboard control board to be powered on
 
-- topic2 /move_base/cmd_vel ([geometry_msgs::Twist](http://docs.ros.org/en/api/geometry_msgs/html/msg/Twist.html)) <br> 
+- topic2 default: /move_base/cmd_vel ([geometry_msgs::Twist](http://docs.ros.org/en/api/geometry_msgs/html/msg/Twist.html)) <br> 
     The hard-coded lightBlinkTopic topic. Used to determine if the safety light should be blinking
 
 - *Not a subscription, but to determine if the lidar is required this node fetches a list of currently running nodes and checks if either of two designated nodes are running. These hard-coded const strings are currently "move_base" and "rviz" but instructions to change are in the Details section below.
@@ -46,7 +46,7 @@ It is the job of this node to publish boolean messages that indicate whether a g
 - topic hoverboard_required ([std_msgs::Bool](http://docs.ros.org/en/noetic/api/std_msgs/html/msg/Bool.html)) <br> 
     True when the the hoverboard control board required. Goes false after hoverboardTimeoutSeconds have passed without a non-zero command on the hoverboardTopic topic.
 - topic light_required ([std_msgs::Bool](http://docs.ros.org/en/noetic/api/std_msgs/html/msg/Bool.html)) <br> 
-    True when the safety light is required (per IGVC rules, this is any tie the system is powered so this is always true when this node is running)
+    True when the safety light is required (his is any tie the system is powered so this is always true when this node is running)
 - topic light_blink_required ([std_msgs::Bool](http://docs.ros.org/en/noetic/api/std_msgs/html/msg/Bool.html))  <br> 
     True when the safety light should be blinking instead of steady (should blink when in autonomous mode)
 - topic lidar_required ([std_msgs::Bool](http://docs.ros.org/en/noetic/api/std_msgs/html/msg/Bool.html))  <br> 
@@ -80,6 +80,7 @@ The Arduino's job is to handle powering devices on and off via common 5v relay m
 - Hoverboard Power Button Relay: The arduino compares the hoverboard_required message with the hoverboard_connected message and if they do no match, it pulses the power button relay to "press" hoverboard control board power button.
 - Safety Light Relay: The Arduino blinks the light_blink_required is true, otherwise it keeps it on as long as light_required is true. 
 - Lidar Power Relay: The Arduino turns on power to the lidar device with lidar_required is true
+- (there are two more but no logical control has been implemented for them and the arduino simply turns them on when powered)
 <br>
 
 **Wiring**
@@ -96,7 +97,7 @@ Arduino programs are commonly called "sketches." The sketch that runs on the Ard
 
 **Pin Numbers and other constants**
 
-Pin numbers and constants are declared at the top of the ros_arduino.ino file and can be changed to suit needs. The constant CONNECTION_TIMEOUT_SECONDS is to ensure that relays are shut off if this much time has elapsed since a message has been received on a given topic (for example if the ros master shuts down while the devices are on). The sketch will have to be re-ruploaded to the Arduino for changes to take effect.    
+Pin numbers and constants are declared at the top of the ros_arduino.ino file and can be changed to suit needs. The constant CONNECTION_TIMEOUT_SECONDS is to ensure that relays are shut off if this much time has elapsed since a message has been received on a given topic (for example if the ros master shuts down while the devices are on). The sketch will have to be re-uploaded to the Arduino for changes to take effect.    
 <br>
 
 ![Arduino Pin Numbers](./images/arduino_consts.jpeg)
@@ -126,7 +127,7 @@ For this package to all work together the arduino_interface_manager_node, rosser
 
 **TODO**
 
-Currently, there is a relay to control fan for each of the two electronics enclosures. It would be good if temperature sensors were added and the relays were controlled to maintain some temperature instead of leaving the fans on always. It would be even better if these two relays were replaced with transistors so fan speed could be modulated with demand instead of simple on/off control. 
+Currently, there are two relay for fans. It would be good if temperature sensors were added and the relays were controlled to maintain some temperature instead of leaving the fans on always. It would be even better if these two relays were replaced with transistors so fan speed could be modulated with demand instead of simple on/off control. 
 
 
 
