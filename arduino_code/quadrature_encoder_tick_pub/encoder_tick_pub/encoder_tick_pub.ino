@@ -1,5 +1,5 @@
 /*
-  encoder_tick_pub.ino is a ROS (Robot Operating System) publisher node that runs on
+  encoder_tick_pub.ino is a ROS (Robot Operating System) publisher node that runs on an Arduino
   and publishes an std_msgs::Int16 (-32,768 to 32,767) wheel encoder ticks
   for both left and right wheels. Tested on arduino nano every
 
@@ -15,12 +15,12 @@
 #include <std_msgs/Float32.h>
 
 #define PUBLISH_INTERVAL 50  //milliseconds
-#define LEFT_ENCODER_A 3
-#define LEFT_ENCODER_B 2
+#define LEFT_ENCODER_A 2
+#define LEFT_ENCODER_B 3
 #define RIGHT_ENCODER_A 6
 #define RIGHT_ENCODER_B 7
 
-//create QuadratueEncoder object from QuadratureEncoderInt16.h
+//create QuadratueEncoder objects from QuadratureEncoderInt16.h
 QuadratureEncoder leftEncoder(LEFT_ENCODER_A, LEFT_ENCODER_B);
 QuadratureEncoder rightEncoder(RIGHT_ENCODER_A, RIGHT_ENCODER_B);
 
