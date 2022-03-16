@@ -55,17 +55,17 @@ int main(int argc, char **argv)
 	ros::ServiceClient startLidarMotor = node.serviceClient<std_srvs::Empty>("/start_motor");
 	
 	std::string topic_name;
-	ros::param::param<std::string>("/rplidar_motor_controller/topic_name", topic_name, "/scan");
+	ros::param::param<std::string>("/rplidar_motor_control/topic_name", topic_name, "/scan");
 	ROS_INFO("Starting rplidar_motor_control node with scan topic: %s", topic_name.c_str()); 
 	
 	ros::Subscriber subRPLidar = node.subscribe(topic_name, 1, updateRPLidarScan);
 	
 	std::string node1;;
-	ros::param::param<std::string>("/rplidar_motor_controller/node1", node1, "rviz");
+	ros::param::param<std::string>("/rplidar_motor_control/node1", node1, "rviz");
 	ROS_INFO("Starting rplidar_motor_control node with node1 name: %s", node1.c_str());
 
 	std::string node2;
-	ros::param::param<std::string>("/rplidar_motor_controller/node2", node2, "move_base"); 
+	ros::param::param<std::string>("/rplidar_motor_control/node2", node2, "move_base"); 
 	ROS_INFO("Starting rplidar_motor_control node with node2 name: %s", node2.c_str());
 
 	ros::Rate loop_rate(1);
@@ -87,16 +87,20 @@ int main(int argc, char **argv)
 			&& getSecondsSince(lastCall) > SECONDS_BETWEEN_TRIES
 			&& ros::service::exists("start_motor", true)){
 				ROS_INFO("Calling motor_start");
-				std_srvs::Empty msg;
-				startLidarMotor.call(msg);
+				//std_srvs::Empty msg;
+				//startLidarMotor.call(msg);
+				relay_gpio_pin.set_on();
+
 				lastCall = ros::Time::now().toSec();			
 		} //turn lidar motor off if scanning connected and doesn't need to be
 		else if(!lidarRequired && IsScanning() 
 				&& getSecondsSince(lastCall) > SECONDS_BETWEEN_TRIES
 				&& ros::service::exists("stop_motor", true)){
 				ROS_INFO("Calling motor_stop");
-				std_srvs::Empty msg;
-				stopLidarMotor.call(msg);		
+				//std_srvs::Empty msg;
+				//stopLidarMotor.call(msg);		
+				relay_gpio_pin.set_off();
+
 				lastCall = ros::Time::now().toSec();
 		}
 		loop_rate.sleep();

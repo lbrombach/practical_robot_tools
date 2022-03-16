@@ -11,6 +11,9 @@ November 2021
 ## Description:
 The RPLidar's motor is always running by default. This can prematurely wear the bearings and reduce robot run-time if running when not needed. This, along with some base robot management packages provided by you, allows for the automatic starting and stopping of the RPLidar motor when certain nodes are started or stopped (Default are rviz and move_base, but user-settable). The "base robot management package" may be as simple as a launch file or script that starts the rplidar_node and the rplidar_motor_control node. 
 
+## Controlling other devices and other easy modifications
+The same method can used to control relays via a Raspberry Pi or, with a little more work, an Arduino. These relays can be used to control other devices. If you'd rather control the motor by monitoring for certain topics instead of running nodes, that is easily done as well. A video walk-through of how this program works, as well as tips to make these changes, is [available on YouTube](https://youtu.be/vWMapMyUcwg).
+
 ## Operation:
 The rplidar_node does provide services to start and stop the motor, but manually calling the services on the command line is cumbersome. This node polls the ROS master to get a list of active nodes. If either of the two modes specified by the user are up, the node presumes that the lidar is likely to be needed. It then listens for the specified scan topic to determine if the rplidar is actively scanning and calls the motor_start and motor_stop services provided by the rplidar_node as needed. The node checks for two nodes. If you only want to monitor for one node simply set both parameters to the same node name. Keep in mind that the node will see a match if any string in the node list contains the string in the node1 or node2 parameter. This means "rviz" will see rviz running even if rviz is registered as "rviz-12kmsflkeetblahblahblah." 
 
