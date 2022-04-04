@@ -87,9 +87,8 @@ int main(int argc, char **argv)
 			&& getSecondsSince(lastCall) > SECONDS_BETWEEN_TRIES
 			&& ros::service::exists("start_motor", true)){
 				ROS_INFO("Calling motor_start");
-				//std_srvs::Empty msg;
-				//startLidarMotor.call(msg);
-				relay_gpio_pin.set_on();
+				std_srvs::Empty msg;
+				startLidarMotor.call(msg);
 
 				lastCall = ros::Time::now().toSec();			
 		} //turn lidar motor off if scanning connected and doesn't need to be
@@ -97,9 +96,8 @@ int main(int argc, char **argv)
 				&& getSecondsSince(lastCall) > SECONDS_BETWEEN_TRIES
 				&& ros::service::exists("stop_motor", true)){
 				ROS_INFO("Calling motor_stop");
-				//std_srvs::Empty msg;
-				//stopLidarMotor.call(msg);		
-				relay_gpio_pin.set_off();
+				std_srvs::Empty msg;
+				stopLidarMotor.call(msg);		
 
 				lastCall = ros::Time::now().toSec();
 		}
