@@ -1,7 +1,7 @@
 #include "ros/ros.h"
 #include "geometry_msgs/Twist.h"
 #include "std_msgs/Bool.h"
-#include "ros_arduino/device_manager.h"
+#include "arduino_ros_relay_control/device_manager.h"
 
 //hoverboard topic callback - stores time of most recent non-zero message recieved
 void updateHoverboardTopic(const geometry_msgs::Twist &cmdVel)
