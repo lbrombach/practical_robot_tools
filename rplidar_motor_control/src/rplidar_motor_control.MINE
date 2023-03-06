@@ -1,0 +1,177 @@
+/*********************************************************************
+ *rplidar_motor_control.cpp is a utility to control the rplidar's motor
+ *by calling the rplidar_node services /stop_motor or /start_motor
+ *based upon whether or not certain other nodes are running.
+ *Part of the practical_robot_utils collection at
+ *https://github.com/lbrombach/practical_robot_tools.git
+ *
+ *Author: Lloyd Brombach
+ *lbrombach2@gmail.com
+ *November 2021
+ **********************************************************************/
+// #include "/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp"
+#include "rclcpp/rclcpp.hpp"
+
+#include "std_srvs/srv/empty.hpp"
+
+#include "sensor_msgs/msg/laser_scan.hpp"
+#include <vector>
+#include <string>
+#include <iostream>
+
+using namespace rclcpp;
+using namespace std::chrono_literals; // enable use of 1s, 100ms, etc.
+
+const int SECONDS_BETWEEN_TRIES = 5; // too fast can cause service to hang and block forever
+rclcpp::Clock myClock;
+double lastScan = -1;				 // store time of last scan recieved
+
+// scan callback - just store time of most recent scan received
+void updateRPLidarScan(const sensor_msgs::msg::LaserScan &scan)
+{
+	lastScan = myClock.now().seconds();
+}
+
+// has a scan been recieved in last one second?
+bool IsScanning()
+{
+	return myClock.now().seconds() - lastScan < 1;
+}
+
+// helper to calculate time elapsed since a given time
+int getSecondsSince(double lastTime)
+{
+	return myClock.now().seconds() - lastTime;
+}
+
+// helper to check if string is found in a list of nodes
+bool isPresent(std::vector<std::string> &nodes, std::string str)
+{
+
+	for (int i = 0; i < nodes.size(); i++)
+	{
+		std::cout << nodes[i] << "  &  " << str << " ? ";
+		if (nodes[i].find(str) != std::string::npos)
+		{
+			std::cout << " YES" << std::endl;
+			return true;
+		}
+	}
+	std::cout << " NOPE" << std::endl;
+	return false;
+}
+
+int main(int argc, char **argv)
+{
+	rclcpp::InitOptions options;
+
+	// normal ROS node setup: Register node with master,  advertise publisher
+
+	rclcpp::init(argc, argv);
+	auto node = std::make_shared<rclcpp::Node>("rplidar_motor_control");
+
+
+	auto stopLidarMotor = node->create_client<std_srvs::srv::Empty>("/stop_motor");
+	auto startLidarMotor = node->create_client<std_srvs::srv::Empty>("/start_motor");
+
+	std::string topic_name;
+	node->declare_parameter("topic_name", "/scan");
+	node->get_parameter("topic_name", topic_name);
+	auto subRPLidar = node->create_subscription<sensor_msgs::msg::LaserScan>(topic_name, 1, updateRPLidarScan);
+
+	std::string node1;
+	std::string node2;
+	node->declare_parameter("node1", "/rviz");
+	node->get_parameter("node1", node1);
+	node->declare_parameter("node2", "/move_base");
+	node->get_parameter("node2", node2);
+
+	RCLCPP_INFO(node->get_logger(), "Starting rplidar_motor_control node with scan topic: %s", topic_name.c_str());
+	RCLCPP_INFO(node->get_logger(), "Starting rplidar_motor_control node with node1 name: %s", node1.c_str());
+	RCLCPP_INFO(node->get_logger(), "Starting rplidar_motor_control node with node2 name: %s", node2.c_str());
+
+	std::cout << " #########  " << myClock.now().seconds() << " ######## " << std::endl;
+
+	rclcpp::Rate loop_rate(1);
+	while (rclcpp::ok())
+	{
+		rclcpp::spin_some(node); // spin()? spin_until_future_complete()?
+		static double lastCall = myClock.now().seconds();
+
+
+		auto node_graph = node->get_node_graph_interface();
+		std::vector<std::string> nodes = node_graph->get_node_names();
+
+		for (int i = 0; i < nodes.size(); i++)
+		{
+			std::cout << nodes[i] << std::endl;
+		}
+		std::cout << "........." << std::endl;
+
+		// check if certain nodes are running
+		bool lidarRequired = isPresent(nodes, node1) || isPresent(nodes, node2);
+
+		//	############################ # #### #FIX ISSCANNING TIMESTAMP SHIT N SHIT############ # ##############
+		std::cout << "lidarRequired ? " << lidarRequired << " ... " << IsScanning() << "  ... " << getSecondsSince(lastCall) << "  ...  " << SECONDS_BETWEEN_TRIES << std::endl;
+
+		while (!stopLidarMotor->wait_for_service(1s) || !startLidarMotor->wait_for_service(1s))
+		{
+			if (!rclcpp::ok())
+			{
+				RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Interrupted while waiting for the service. Exiting.");
+				return 0;
+			}
+			RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "service not available, waiting again...");
+		}
+
+		// start lidar motor if needed and not already scanning
+		if (lidarRequired && !IsScanning() && getSecondsSince(lastCall) > SECONDS_BETWEEN_TRIES)
+		{
+			std::cout << "IN START ?? " << std::endl;
+			RCLCPP_INFO(node->get_logger(), "Calling motor_start");
+			//	std_srvs::srv::Empty msg;
+			//  startLidarMotor.call(msg);
+			auto request = std::make_shared<std_srvs::srv::Empty::Request>();
+			auto result_future = startLidarMotor->async_send_request(request);
+
+			//	if (rclcpp::spin_until_future_complete(node, future) == rclcpp::executor::FutureReturnCode::SUCCESS)
+			if (rclcpp::spin_until_future_complete(node, result_future) != rclcpp::FutureReturnCode::SUCCESS)
+			{
+				RCLCPP_INFO(node->get_logger(), "Service called successfully.");
+			}
+			else
+			{
+				RCLCPP_ERROR(node->get_logger(), "Service call failed.");
+			}
+
+			lastCall = myClock.now().seconds();
+		} // turn lidar motor off if scanning connected and doesn't need to be
+		else if (!lidarRequired && IsScanning() && getSecondsSince(lastCall) > SECONDS_BETWEEN_TRIES)
+		{
+			std::cout << "IN STOP ?? " << std::endl;
+			RCLCPP_INFO(node->get_logger(), "Calling motor_stop");
+			// std_srvs::srv::Empty msg;
+			// stopLidarMotor.call(msg);
+			auto request = std::make_shared<std_srvs::srv::Empty::Request>();
+			auto result_future = stopLidarMotor->async_send_request(request);
+
+			if (rclcpp::spin_until_future_complete(node, result_future) == rclcpp::FutureReturnCode::SUCCESS)
+			{
+				RCLCPP_INFO(node->get_logger(), "Service called successfully.");
+			}
+			else
+			{
+				RCLCPP_ERROR(node->get_logger(), "Service call failed.");
+			}
+
+			lastCall = myClock.now().seconds();
+		}
+		else
+		{
+			std::cout << "SKIPPING WTF ? " << std::endl;
+		}
+		loop_rate.sleep();
+	}
+	rclcpp::shutdown();
+	return 0;
+}
