@@ -1,0 +1,32 @@
+  <?xml version="1.0"?>
+  <package format="2">
+    <name>ros_arduino</name>
+    <version>0.0.0</version>
+    <description>The ros_arduino package</description>
+
+    <!-- One maintainer tag required, multiple allowed, one person per tag -->
+    <!-- Example:  -->
+    <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
+    <maintainer email="lloyd@todo.todo">lloyd</maintainer>
+
+
+    <!-- One license tag required, multiple allowed, one license per tag -->
+    <!-- Commonly used license strings: -->
+    <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
+    <license>TODO</license>
+
+
+    <build_depend>rclcpp</build_depend>
+    <build_depend>std_msgs</build_depend>
+    <build_export_depend>rclcpp</build_export_depend>
+    <build_export_depend>std_msgs</build_export_depend>
+    <exec_depend>rclcpp</exec_depend>
+    <exec_depend>std_msgs</exec_depend>
+
+
+    <!-- The export tag contains other, unspecified, tags -->
+    <export>
+      <!-- Other tools can request additional information be placed here -->
+
+    </export>
+  </package>
