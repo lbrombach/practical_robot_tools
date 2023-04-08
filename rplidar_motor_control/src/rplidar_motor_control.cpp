@@ -89,22 +89,24 @@ int main(int argc, char **argv)
 
     std::cout << "lidarRequired ? " << lidarRequired << " ... " << isScanning() << "  ... " << getSecondsSince(lastScan) << std::endl;
 
+
     // start lidar motor if needed and not already scanning
-    if (lidarRequired && !isScanning() && getSecondsSince(lastCall) > SECONDS_BETWEEN_TRIES && rclcpp::service::exists("start_motor"))
+    if (lidarRequired && !isScanning() && getSecondsSince(lastCall) > SECONDS_BETWEEN_TRIES &&  startLidarMotor->wait_for_service(1s))
     {
       RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Calling motor_start");
       auto request = std::make_shared<std_srvs::srv::Empty::Request>();
       auto future_result = startLidarMotor->async_send_request(request);
-      lastCall = now();
+      lastCall = myClock.now().seconds();
     }
     // turn lidar motor off if scanning connected and doesn't need to be
-    else if (!lidarRequired && IsScanning() && get_seconds_since(lastCall) > SECONDS_BETWEEN_TRIES && rclcpp::service::exists("stop_motor"))
+    else if (!lidarRequired && isScanning() && getSecondsSince(lastCall) > SECONDS_BETWEEN_TRIES && stopLidarMotor->wait_for_service(1s))
     {
       RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Calling motor_stop");
       auto request = std::make_shared<std_srvs::srv::Empty::Request>();
       auto future_result = stopLidarMotor->async_send_request(request);
-      lastCall = now();
+      lastCall = myClock.now().seconds();
     }
-    rclcpp::sleep_for(std::chrono::milliseconds(static_cast<int>(1000.0 / loop_rate)));
+    loop_rate.sleep();
   }
 }
+

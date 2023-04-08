@@ -1,0 +1,35 @@
+[0.013s] Invoking command in '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\033[01;32m\]\u@\h: \[\033[34m\]\W\[\033[00;32m\] $(git_branch)\[\033[00m\]$ /usr/bin/cmake --build /home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino -- -j12 -l12
+[0.051s] [35m[1mConsolidate compiler generated dependencies of target test_protocol[0m
+[0.078s] [ 33%] [32mBuilding CXX object CMakeFiles/test_protocol.dir/src/SerialMessage.cpp.o[0m
+[0.304s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:[m[K In copy constructor ‘[01m[KSerialMessage<T>::SerialMessage(const SerialMessage<T>&)[m[K’:
+[0.304s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:15:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage_type[m[K’ was not declared in this scope; did you mean ‘[01m[KMessageType[m[K’?
+[0.305s]    15 |     [01;31m[Kmessage_type[m[K = other.message_type;
+[0.305s]       |     [01;31m[K^~~~~~~~~~~~[m[K
+[0.305s]       |     [32m[KMessageType[m[K
+[0.305s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:[m[K In constructor ‘[01m[KSerialMessage<T>::SerialMessage(MessageType, const string&)[m[K’:
+[0.305s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:20:84:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KSerialMessage<T>[m[K’ does not have any field named ‘[01m[Kmessage_type[m[K’
+[0.305s]    20 | SerialMessage<T>::SerialMessage(MessageType type, const std::string &topic_name) : [01;31m[Kmessage_type[m[K(type), topic(topic_name)
+[0.305s]       |                                                                                    [01;31m[K^~~~~~~~~~~~[m[K
+[0.309s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:[m[K In member function ‘[01m[Kstd::vector<unsigned char> SerialMessage<T>::pack() const[m[K’:
+[0.309s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:32:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage_type[m[K’ was not declared in this scope; did you mean ‘[01m[KMessageType[m[K’?
+[0.309s]    32 |     uint16_t type = (uint16_t)[01;31m[Kmessage_type[m[K;
+[0.309s]       |                               [01;31m[K^~~~~~~~~~~~[m[K
+[0.309s]       |                               [32m[KMessageType[m[K
+[0.311s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:[m[K In member function ‘[01m[KT SerialMessage<T>::unpack(const std::vector<unsigned char>&)[m[K’:
+[0.311s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:63:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage_type[m[K’ was not declared in this scope; did you mean ‘[01m[KMessageType[m[K’?
+[0.312s]    63 |         [01;31m[Kmessage_type[m[K = MessageType::MSG_TYPE_NONE;
+[0.312s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[0.312s]       |         [32m[KMessageType[m[K
+[0.314s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:78:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage_type[m[K’ was not declared in this scope; did you mean ‘[01m[KMessageType[m[K’?
+[0.314s]    78 |         [01;31m[Kmessage_type[m[K = MessageType::MSG_TYPE_NONE;
+[0.314s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[0.314s]       |         [32m[KMessageType[m[K
+[0.316s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:[m[K In member function ‘[01m[KMessageType SerialMessage<T>::getType() const[m[K’:
+[0.316s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:116:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage_type[m[K’ was not declared in this scope; did you mean ‘[01m[KMessageType[m[K’?
+[0.316s]   116 |     return [01;31m[Kmessage_type[m[K;
+[0.316s]       |            [01;31m[K^~~~~~~~~~~~[m[K
+[0.316s]       |            [32m[KMessageType[m[K
+[0.341s] gmake[2]: *** [CMakeFiles/test_protocol.dir/build.make:90: CMakeFiles/test_protocol.dir/src/SerialMessage.cpp.o] Error 1
+[0.342s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/test_protocol.dir/all] Error 2
+[0.342s] gmake: *** [Makefile:146: all] Error 2
+[0.344s] Invoked command in '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\033[01;32m\]\u@\h: \[\033[34m\]\W\[\033[00;32m\] $(git_branch)\[\033[00m\]$ /usr/bin/cmake --build /home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino -- -j12 -l12

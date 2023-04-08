@@ -1,0 +1,20 @@
+[0.013s] Invoking command in '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\033[01;32m\]\u@\h: \[\033[34m\]\W\[\033[00;32m\] $(git_branch)\[\033[00m\]$ /usr/bin/cmake --build /home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino -- -j12 -l12
+[0.050s] [35m[1mConsolidate compiler generated dependencies of target test_protocol[0m
+[0.069s] [ 33%] [32mBuilding CXX object CMakeFiles/test_protocol.dir/src/SerialMessage.cpp.o[0m
+[0.294s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:[m[K In member function ‘[01m[KT SerialMessage<T>::unpack(const std::vector<unsigned char>&)[m[K’:
+[0.294s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:86:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktype[m[K’ was not declared in this scope; did you mean ‘[01m[Kwctype[m[K’?
+[0.294s]    86 |     if ([01;31m[Ktype[m[K != MessageType::MSG_TYPE_BOOL  || type != MessageType::MSG_TYPE_INT8 )  ///TODO ADD ALL TYPES
+[0.294s]       |         [01;31m[K^~~~[m[K
+[0.294s]       |         [32m[Kwctype[m[K
+[0.296s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:99:57:[m[K [01;31m[Kerror: [m[K‘[01m[Ktopic_length[m[K’ was not declared in this scope
+[0.296s]    99 |     temp.topic(packet.begin() + 7, packet.begin() + 7 + [01;31m[Ktopic_length[m[K);
+[0.296s]       |                                                         [01;31m[K^~~~~~~~~~~~[m[K
+[0.297s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:[m[K In member function ‘[01m[Kstd::string SerialMessage<T>::toString() const[m[K’:
+[0.297s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:129:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ktype[m[K’ was not declared in this scope; did you mean ‘[01m[Kwctype[m[K’?
+[0.297s]   129 |     str += "  Type: " + [01;31m[Ktype[m[K;
+[0.297s]       |                         [01;31m[K^~~~[m[K
+[0.297s]       |                         [32m[Kwctype[m[K
+[0.321s] gmake[2]: *** [CMakeFiles/test_protocol.dir/build.make:90: CMakeFiles/test_protocol.dir/src/SerialMessage.cpp.o] Error 1
+[0.322s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/test_protocol.dir/all] Error 2
+[0.322s] gmake: *** [Makefile:146: all] Error 2
+[0.325s] Invoked command in '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\033[01;32m\]\u@\h: \[\033[34m\]\W\[\033[00;32m\] $(git_branch)\[\033[00m\]$ /usr/bin/cmake --build /home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino -- -j12 -l12

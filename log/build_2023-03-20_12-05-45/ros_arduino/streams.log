@@ -1,0 +1,42 @@
+[0.012s] Invoking command in '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\033[01;32m\]\u@\h: \[\033[34m\]\W\[\033[00;32m\] $(git_branch)\[\033[00m\]$ /usr/bin/cmake --build /home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino -- -j12 -l12
+[0.034s] -- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.152s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.158s] -- Found rclcpp: 16.0.3 (/opt/ros/humble/share/rclcpp/cmake)
+[0.197s] -- Found rosidl_generator_c: 3.1.3 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.199s] -- Found rosidl_adapter: 3.1.3 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.205s] -- Found rosidl_generator_cpp: 3.1.3 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.215s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.229s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.285s] -- Found rmw_implementation_cmake: 6.1.0 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.286s] -- Found rmw_fastrtps_cpp: 6.2.1 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.407s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.560s] -- Found rclcpp_components: 16.0.1 (/opt/ros/humble/share/rclcpp_components/cmake)
+[0.674s] -- Configuring done
+[0.682s] -- Generating done
+[0.684s] -- Build files have been written to: /home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino
+[0.713s] [35m[1mConsolidate compiler generated dependencies of target test_protocol[0m
+[0.732s] [ 66%] [32mBuilding CXX object CMakeFiles/test_protocol.dir/src/test_protocol.cpp.o[0m
+[0.732s] [ 66%] [32mBuilding CXX object CMakeFiles/test_protocol.dir/src/SerialMessage.cpp.o[0m
+[3.051s] [100%] [32m[1mLinking CXX executable test_protocol[0m
+[3.132s] /usr/bin/ld: CMakeFiles/test_protocol.dir/src/test_protocol.cpp.o: in function `main':
+[3.133s] test_protocol.cpp:(.text+0xd8): undefined reference to `SerialMessage<bool>::SerialMessage(MessageType, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+[3.133s] /usr/bin/ld: test_protocol.cpp:(.text+0x10c): undefined reference to `SerialMessage<bool>::pack() const'
+[3.133s] /usr/bin/ld: test_protocol.cpp:(.text+0xb92): undefined reference to `SerialMessage<bool>::SerialMessage()'
+[3.133s] /usr/bin/ld: test_protocol.cpp:(.text+0xbab): undefined reference to `SerialMessage<bool>::unpack(std::vector<unsigned char, std::allocator<unsigned char> > const&)'
+[3.133s] /usr/bin/ld: test_protocol.cpp:(.text+0xbdd): undefined reference to `SerialMessage<bool>::toString[abi:cxx11]() const'
+[3.133s] /usr/bin/ld: test_protocol.cpp:(.text+0xc3c): undefined reference to `SerialMessage<bool>::toString[abi:cxx11]() const'
+[3.133s] /usr/bin/ld: test_protocol.cpp:(.text+0xcd5): undefined reference to `SerialMessage<bool>::toString[abi:cxx11]() const'
+[3.133s] /usr/bin/ld: test_protocol.cpp:(.text+0xd18): undefined reference to `SerialMessage<bool>::SerialMessage(SerialMessage<bool> const&)'
+[3.133s] /usr/bin/ld: test_protocol.cpp:(.text+0xd4d): undefined reference to `SerialMessage<bool>::toString[abi:cxx11]() const'
+[3.133s] /usr/bin/ld: test_protocol.cpp:(.text+0xd96): undefined reference to `SerialMessage<bool>::pack() const'
+[3.133s] /usr/bin/ld: test_protocol.cpp:(.text+0xe3f): undefined reference to `SerialMessage<bool>::~SerialMessage()'
+[3.133s] /usr/bin/ld: test_protocol.cpp:(.text+0xe4e): undefined reference to `SerialMessage<bool>::~SerialMessage()'
+[3.133s] /usr/bin/ld: test_protocol.cpp:(.text+0xe6c): undefined reference to `SerialMessage<bool>::~SerialMessage()'
+[3.133s] /usr/bin/ld: test_protocol.cpp:(.text+0xfb9): undefined reference to `SerialMessage<bool>::~SerialMessage()'
+[3.134s] /usr/bin/ld: test_protocol.cpp:(.text+0xfd1): undefined reference to `SerialMessage<bool>::~SerialMessage()'
+[3.134s] /usr/bin/ld: CMakeFiles/test_protocol.dir/src/test_protocol.cpp.o:test_protocol.cpp:(.text+0x1001): more undefined references to `SerialMessage<bool>::~SerialMessage()' follow
+[3.139s] collect2: error: ld returned 1 exit status
+[3.141s] gmake[2]: *** [CMakeFiles/test_protocol.dir/build.make:175: test_protocol] Error 1
+[3.141s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/test_protocol.dir/all] Error 2
+[3.142s] gmake: *** [Makefile:146: all] Error 2
+[3.143s] Invoked command in '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\033[01;32m\]\u@\h: \[\033[34m\]\W\[\033[00;32m\] $(git_branch)\[\033[00m\]$ /usr/bin/cmake --build /home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino -- -j12 -l12

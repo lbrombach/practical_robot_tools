@@ -1,0 +1,14 @@
+[0.012s] Invoking command in '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\033[01;32m\]\u@\h: \[\033[34m\]\W\[\033[00;32m\] $(git_branch)\[\033[00m\]$ /usr/bin/cmake --build /home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino -- -j12 -l12
+[0.050s] [35m[1mConsolidate compiler generated dependencies of target test_protocol[0m
+[0.069s] [ 33%] [32mBuilding CXX object CMakeFiles/test_protocol.dir/src/SerialMessage.cpp.o[0m
+[0.313s] /home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp: In instantiation of ‘[01m[KSerialMessage<T> SerialMessage<T>::unpack(const std::vector<unsigned char>&) [with T = bool][m[K’:
+[0.314s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:4:16:[m[K   required from here
+[0.314s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:85:16:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[Kfalse[m[K’ from ‘[01m[Kbool[m[K’ to ‘[01m[KSerialMessage<bool>[m[K’
+[0.314s]    85 |         return [01;31m[Kfalse[m[K;
+[0.314s]       |                [01;31m[K^~~~~[m[K
+[0.314s]       |                [01;31m[K|[m[K
+[0.314s]       |                [01;31m[Kbool[m[K
+[0.349s] gmake[2]: *** [CMakeFiles/test_protocol.dir/build.make:90: CMakeFiles/test_protocol.dir/src/SerialMessage.cpp.o] Error 1
+[0.349s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/test_protocol.dir/all] Error 2
+[0.349s] gmake: *** [Makefile:146: all] Error 2
+[0.352s] Invoked command in '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\033[01;32m\]\u@\h: \[\033[34m\]\W\[\033[00;32m\] $(git_branch)\[\033[00m\]$ /usr/bin/cmake --build /home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino -- -j12 -l12

@@ -1,0 +1,3 @@
+[35m[1mConsolidate compiler generated dependencies of target test_protocol[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/test_protocol.dir/src/test_protocol.cpp.o[0m
+[ 66%] [32m[1mLinking CXX executable test_protocol[0m

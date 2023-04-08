@@ -1,0 +1,15 @@
+[35m[1mConsolidate compiler generated dependencies of target test_protocol[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/test_protocol.dir/src/SerialMessage.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/test_protocol.dir/src/test_protocol.cpp.o[0m
+/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp: In instantiation of ‘[01m[KT SerialMessage<T>::unpack(const std::vector<unsigned char>&) [with T = bool][m[K’:
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:4:16:[m[K   required from here
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:106:15:[m[K [01;31m[Kerror: [m[Kno match for call to ‘[01m[K(std::string {aka std::__cxx11::basic_string<char>}) (__gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >, __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >)[m[K’
+  106 |     [01;31m[Ktemp.topic(packet.begin() + 7, packet.begin() + 7 + temp.topic_length)[m[K;
+      |     [01;31m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:117:12:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[KSerialMessage<bool>[m[K’ to ‘[01m[Kbool[m[K’ in return
+  117 |     return [01;31m[Ktemp[m[K;
+      |            [01;31m[K^~~~[m[K
+gmake[2]: *** [CMakeFiles/test_protocol.dir/build.make:90: CMakeFiles/test_protocol.dir/src/SerialMessage.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/test_protocol.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

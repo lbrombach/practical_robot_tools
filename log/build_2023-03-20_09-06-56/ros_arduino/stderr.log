@@ -1,0 +1,52 @@
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:[m[K In constructor ‘[01m[KROS2Bool<T>::ROS2Bool()[m[K’:
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:11:27:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KROS2Bool<T>[m[K’ does not have any field named ‘[01m[KROS2Msg[m[K’
+   11 | ROS2Bool<T>::ROS2Bool() : [01;31m[KROS2Msg[m[K(MessageType::MSG_TYPE_BOOL, ""), data(false)
+      |                           [01;31m[K^~~~~~~[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:[m[K In copy constructor ‘[01m[KROS2Bool<T>::ROS2Bool(const ROS2Bool<T>&)[m[K’:
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:16:48:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KROS2Bool<T>[m[K’ does not have any field named ‘[01m[KROS2Msg[m[K’
+   16 | ROS2Bool<T>::ROS2Bool(const ROS2Bool &other) : [01;31m[KROS2Msg[m[K(other), data(other.data) {}
+      |                                                [01;31m[K^~~~~~~[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:[m[K In constructor ‘[01m[KROS2Bool<T>::ROS2Bool(const string&, bool)[m[K’:
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:20:69:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KROS2Bool<T>[m[K’ does not have any field named ‘[01m[KROS2Msg[m[K’
+   20 | ROS2Bool<T>::ROS2Bool(const std::string &_topic_name, bool _data) : [01;31m[KROS2Msg[m[K(MessageType::MSG_TYPE_BOOL, _topic_name), data(_data)
+      |                                                                     [01;31m[K^~~~~~~[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:[m[K In member function ‘[01m[Kstd::vector<unsigned char> ROS2Bool<T>::pack()[m[K’:
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:35:12:[m[K [01;31m[Kerror: [m[K‘[01m[Ktemplate<class T> class ROS2Msg[m[K’ used without template arguments
+   35 |     return [01;31m[KROS2Msg[m[K::pack(data);
+      |            [01;31m[K^~~~~~~[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:[m[K In member function ‘[01m[Kbool ROS2Bool<T>::unpack(const std::vector<unsigned char>&)[m[K’:
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:71:22:[m[K [01;31m[Kerror: [m[K‘[01m[Ktemplate<class T> class ROS2Msg[m[K’ used without template arguments
+   71 |     if (packet[0] != [01;31m[KROS2Msg[m[K::START_SIGNAL[0] ||
+      |                      [01;31m[K^~~~~~~[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:72:22:[m[K [01;31m[Kerror: [m[K‘[01m[Ktemplate<class T> class ROS2Msg[m[K’ used without template arguments
+   72 |         packet[1] != [01;31m[KROS2Msg[m[K::START_SIGNAL[1] ||
+      |                      [01;31m[K^~~~~~~[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:73:22:[m[K [01;31m[Kerror: [m[K‘[01m[Ktemplate<class T> class ROS2Msg[m[K’ used without template arguments
+   73 |         packet[2] != [01;31m[KROS2Msg[m[K::START_SIGNAL[2])
+      |                      [01;31m[K^~~~~~~[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:76:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage_type[m[K’ was not declared in this scope; did you mean ‘[01m[KMessageType[m[K’?
+   76 |         [01;31m[Kmessage_type[m[K = MessageType::MSG_TYPE_NONE;
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+      |         [32m[KMessageType[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:91:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage_type[m[K’ was not declared in this scope; did you mean ‘[01m[KMessageType[m[K’?
+   91 |         [01;31m[Kmessage_type[m[K = MessageType::MSG_TYPE_NONE;
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+      |         [32m[KMessageType[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:100:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage_type[m[K’ was not declared in this scope; did you mean ‘[01m[KMessageType[m[K’?
+  100 |         [01;31m[Kmessage_type[m[K = MessageType::MSG_TYPE_NONE;
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+      |         [32m[KMessageType[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:115:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage_type[m[K’ was not declared in this scope; did you mean ‘[01m[KMessageType[m[K’?
+  115 |     [01;31m[Kmessage_type[m[K = MessageType::MSG_TYPE_BOOL;
+      |     [01;31m[K^~~~~~~~~~~~[m[K
+      |     [32m[KMessageType[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:116:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktopic[m[K’ was not declared in this scope
+  116 |     [01;31m[Ktopic[m[K = topic_name;
+      |     [01;31m[K^~~~~[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:[m[K In member function ‘[01m[Kstd::string ROS2Bool<T>::toString() const[m[K’:
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:124:12:[m[K [01;31m[Kerror: [m[K‘[01m[Ktopic[m[K’ was not declared in this scope
+  124 |     return [01;31m[Ktopic[m[K + (data ? " true" : " false");
+      |            [01;31m[K^~~~~[m[K
+gmake[2]: *** [CMakeFiles/test_protocol.dir/build.make:90: CMakeFiles/test_protocol.dir/src/ROS2Bool.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/test_protocol.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

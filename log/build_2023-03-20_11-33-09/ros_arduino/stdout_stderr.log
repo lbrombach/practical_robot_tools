@@ -1,0 +1,18 @@
+[35m[1mConsolidate compiler generated dependencies of target test_protocol[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/test_protocol.dir/src/SerialMessage.cpp.o[0m
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:[m[K In member function ‘[01m[KT SerialMessage<T>::unpack(const std::vector<unsigned char>&)[m[K’:
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:86:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktype[m[K’ was not declared in this scope; did you mean ‘[01m[Kwctype[m[K’?
+   86 |     if ([01;31m[Ktype[m[K != MessageType::MSG_TYPE_BOOL  || type != MessageType::MSG_TYPE_INT8 )  ///TODO ADD ALL TYPES
+      |         [01;31m[K^~~~[m[K
+      |         [32m[Kwctype[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:99:57:[m[K [01;31m[Kerror: [m[K‘[01m[Ktopic_length[m[K’ was not declared in this scope
+   99 |     temp.topic(packet.begin() + 7, packet.begin() + 7 + [01;31m[Ktopic_length[m[K);
+      |                                                         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:[m[K In member function ‘[01m[Kstd::string SerialMessage<T>::toString() const[m[K’:
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:129:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ktype[m[K’ was not declared in this scope; did you mean ‘[01m[Kwctype[m[K’?
+  129 |     str += "  Type: " + [01;31m[Ktype[m[K;
+      |                         [01;31m[K^~~~[m[K
+      |                         [32m[Kwctype[m[K
+gmake[2]: *** [CMakeFiles/test_protocol.dir/build.make:90: CMakeFiles/test_protocol.dir/src/SerialMessage.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/test_protocol.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

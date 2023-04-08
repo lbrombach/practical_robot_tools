@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "colcon build",
+            "type": "shell",
+            "command": "colcon build --cmake-args -DCMAKE_CXX_FLAGS=-I${workspaceFolder}/src/practical_robot_tools/ros_arduino/include",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$gcc"
+        }
+    ]
+}

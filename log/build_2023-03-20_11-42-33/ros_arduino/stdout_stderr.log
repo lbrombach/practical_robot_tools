@@ -1,0 +1,24 @@
+[35m[1mConsolidate compiler generated dependencies of target test_protocol[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/test_protocol.dir/src/test_protocol.cpp.o[0m
+[ 66%] [32m[1mLinking CXX executable test_protocol[0m
+/usr/bin/ld: CMakeFiles/test_protocol.dir/src/test_protocol.cpp.o: in function `main':
+test_protocol.cpp:(.text+0xd8): undefined reference to `SerialMessage<bool>::SerialMessage(MessageType, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/usr/bin/ld: test_protocol.cpp:(.text+0x10c): undefined reference to `SerialMessage<bool>::pack() const'
+/usr/bin/ld: test_protocol.cpp:(.text+0xb92): undefined reference to `SerialMessage<bool>::SerialMessage()'
+/usr/bin/ld: test_protocol.cpp:(.text+0xbab): undefined reference to `SerialMessage<bool>::unpack(std::vector<unsigned char, std::allocator<unsigned char> > const&)'
+/usr/bin/ld: test_protocol.cpp:(.text+0xbdd): undefined reference to `SerialMessage<bool>::toString[abi:cxx11]() const'
+/usr/bin/ld: test_protocol.cpp:(.text+0xc3c): undefined reference to `SerialMessage<bool>::toString[abi:cxx11]() const'
+/usr/bin/ld: test_protocol.cpp:(.text+0xcd5): undefined reference to `SerialMessage<bool>::toString[abi:cxx11]() const'
+/usr/bin/ld: test_protocol.cpp:(.text+0xd18): undefined reference to `SerialMessage<bool>::SerialMessage(SerialMessage<bool> const&)'
+/usr/bin/ld: test_protocol.cpp:(.text+0xd4d): undefined reference to `SerialMessage<bool>::toString[abi:cxx11]() const'
+/usr/bin/ld: test_protocol.cpp:(.text+0xd96): undefined reference to `SerialMessage<bool>::pack() const'
+/usr/bin/ld: test_protocol.cpp:(.text+0xe3f): undefined reference to `SerialMessage<bool>::~SerialMessage()'
+/usr/bin/ld: test_protocol.cpp:(.text+0xe4e): undefined reference to `SerialMessage<bool>::~SerialMessage()'
+/usr/bin/ld: test_protocol.cpp:(.text+0xe6c): undefined reference to `SerialMessage<bool>::~SerialMessage()'
+/usr/bin/ld: test_protocol.cpp:(.text+0xfb9): undefined reference to `SerialMessage<bool>::~SerialMessage()'
+/usr/bin/ld: test_protocol.cpp:(.text+0xfd1): undefined reference to `SerialMessage<bool>::~SerialMessage()'
+/usr/bin/ld: CMakeFiles/test_protocol.dir/src/test_protocol.cpp.o:test_protocol.cpp:(.text+0x1001): more undefined references to `SerialMessage<bool>::~SerialMessage()' follow
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/test_protocol.dir/build.make:175: test_protocol] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/test_protocol.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

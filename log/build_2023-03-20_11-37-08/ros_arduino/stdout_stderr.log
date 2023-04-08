@@ -1,0 +1,33 @@
+[35m[1mConsolidate compiler generated dependencies of target test_protocol[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/test_protocol.dir/src/SerialMessage.cpp.o[0m
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:[m[K In copy constructor ‘[01m[KSerialMessage<T>::SerialMessage(const SerialMessage<T>&)[m[K’:
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:15:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage_type[m[K’ was not declared in this scope; did you mean ‘[01m[KMessageType[m[K’?
+   15 |     [01;31m[Kmessage_type[m[K = other.message_type;
+      |     [01;31m[K^~~~~~~~~~~~[m[K
+      |     [32m[KMessageType[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:[m[K In constructor ‘[01m[KSerialMessage<T>::SerialMessage(MessageType, const string&)[m[K’:
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:20:84:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KSerialMessage<T>[m[K’ does not have any field named ‘[01m[Kmessage_type[m[K’
+   20 | SerialMessage<T>::SerialMessage(MessageType type, const std::string &topic_name) : [01;31m[Kmessage_type[m[K(type), topic(topic_name)
+      |                                                                                    [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:[m[K In member function ‘[01m[Kstd::vector<unsigned char> SerialMessage<T>::pack() const[m[K’:
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:32:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage_type[m[K’ was not declared in this scope; did you mean ‘[01m[KMessageType[m[K’?
+   32 |     uint16_t type = (uint16_t)[01;31m[Kmessage_type[m[K;
+      |                               [01;31m[K^~~~~~~~~~~~[m[K
+      |                               [32m[KMessageType[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:[m[K In member function ‘[01m[KT SerialMessage<T>::unpack(const std::vector<unsigned char>&)[m[K’:
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:63:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage_type[m[K’ was not declared in this scope; did you mean ‘[01m[KMessageType[m[K’?
+   63 |         [01;31m[Kmessage_type[m[K = MessageType::MSG_TYPE_NONE;
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+      |         [32m[KMessageType[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:78:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage_type[m[K’ was not declared in this scope; did you mean ‘[01m[KMessageType[m[K’?
+   78 |         [01;31m[Kmessage_type[m[K = MessageType::MSG_TYPE_NONE;
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+      |         [32m[KMessageType[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:[m[K In member function ‘[01m[KMessageType SerialMessage<T>::getType() const[m[K’:
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:116:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage_type[m[K’ was not declared in this scope; did you mean ‘[01m[KMessageType[m[K’?
+  116 |     return [01;31m[Kmessage_type[m[K;
+      |            [01;31m[K^~~~~~~~~~~~[m[K
+      |            [32m[KMessageType[m[K
+gmake[2]: *** [CMakeFiles/test_protocol.dir/build.make:90: CMakeFiles/test_protocol.dir/src/SerialMessage.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/test_protocol.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

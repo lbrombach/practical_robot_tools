@@ -1,0 +1,26 @@
+[0.013s] Invoking command in '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\033[01;32m\]\u@\h: \[\033[34m\]\W\[\033[00;32m\] $(git_branch)\[\033[00m\]$ /usr/bin/cmake --build /home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino -- -j12 -l12
+[0.053s] [35m[1mConsolidate compiler generated dependencies of target test_protocol[0m
+[0.071s] [ 33%] [32mBuilding CXX object CMakeFiles/test_protocol.dir/src/SerialMessage.cpp.o[0m
+[0.369s] [ 66%] [32m[1mLinking CXX executable test_protocol[0m
+[0.499s] /usr/bin/ld: CMakeFiles/test_protocol.dir/src/test_protocol.cpp.o: in function `main':
+[0.499s] test_protocol.cpp:(.text+0xdb): undefined reference to `ROS2Bool<bool>::ROS2Bool(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool)'
+[0.499s] /usr/bin/ld: test_protocol.cpp:(.text+0x10f): undefined reference to `ROS2Bool<bool>::pack()'
+[0.499s] /usr/bin/ld: test_protocol.cpp:(.text+0xb95): undefined reference to `ROS2Bool<bool>::ROS2Bool()'
+[0.499s] /usr/bin/ld: test_protocol.cpp:(.text+0xbae): undefined reference to `ROS2Bool<bool>::unpack(std::vector<unsigned char, std::allocator<unsigned char> > const&)'
+[0.499s] /usr/bin/ld: test_protocol.cpp:(.text+0xbe0): undefined reference to `ROS2Bool<bool>::toString[abi:cxx11]() const'
+[0.499s] /usr/bin/ld: test_protocol.cpp:(.text+0xc3f): undefined reference to `ROS2Bool<bool>::toString[abi:cxx11]() const'
+[0.499s] /usr/bin/ld: test_protocol.cpp:(.text+0xca2): undefined reference to `ROS2Bool<bool>::toString[abi:cxx11]() const'
+[0.499s] /usr/bin/ld: test_protocol.cpp:(.text+0xce5): undefined reference to `ROS2Bool<bool>::ROS2Bool(ROS2Bool<bool> const&)'
+[0.499s] /usr/bin/ld: test_protocol.cpp:(.text+0xd1a): undefined reference to `ROS2Bool<bool>::toString[abi:cxx11]() const'
+[0.499s] /usr/bin/ld: test_protocol.cpp:(.text+0xd63): undefined reference to `ROS2Bool<bool>::pack()'
+[0.499s] /usr/bin/ld: test_protocol.cpp:(.text+0xe0c): undefined reference to `ROS2Bool<bool>::~ROS2Bool()'
+[0.500s] /usr/bin/ld: test_protocol.cpp:(.text+0xe1b): undefined reference to `ROS2Bool<bool>::~ROS2Bool()'
+[0.500s] /usr/bin/ld: test_protocol.cpp:(.text+0xe39): undefined reference to `ROS2Bool<bool>::~ROS2Bool()'
+[0.500s] /usr/bin/ld: test_protocol.cpp:(.text+0xf86): undefined reference to `ROS2Bool<bool>::~ROS2Bool()'
+[0.500s] /usr/bin/ld: test_protocol.cpp:(.text+0xf9e): undefined reference to `ROS2Bool<bool>::~ROS2Bool()'
+[0.500s] /usr/bin/ld: CMakeFiles/test_protocol.dir/src/test_protocol.cpp.o:test_protocol.cpp:(.text+0xfce): more undefined references to `ROS2Bool<bool>::~ROS2Bool()' follow
+[0.505s] collect2: error: ld returned 1 exit status
+[0.507s] gmake[2]: *** [CMakeFiles/test_protocol.dir/build.make:175: test_protocol] Error 1
+[0.507s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/test_protocol.dir/all] Error 2
+[0.507s] gmake: *** [Makefile:146: all] Error 2
+[0.509s] Invoked command in '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\033[01;32m\]\u@\h: \[\033[34m\]\W\[\033[00;32m\] $(git_branch)\[\033[00m\]$ /usr/bin/cmake --build /home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino -- -j12 -l12

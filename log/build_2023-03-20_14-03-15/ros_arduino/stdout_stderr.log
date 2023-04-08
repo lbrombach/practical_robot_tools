@@ -1,0 +1,29 @@
+[35m[1mConsolidate compiler generated dependencies of target test_protocol[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/test_protocol.dir/src/SerialMessage.cpp.o[0m
+[ 66%] [32m[1mLinking CXX executable test_protocol[0m
+[100%] Built target test_protocol
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ament_index/resource_index/package_run_dependencies/ros_arduino
+-- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ament_index/resource_index/parent_prefix_path/ros_arduino
+-- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ros_arduino/environment/ament_prefix_path.sh
+-- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ros_arduino/environment/ament_prefix_path.dsv
+-- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ros_arduino/environment/path.sh
+-- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ros_arduino/environment/path.dsv
+-- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ros_arduino/local_setup.bash
+-- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ros_arduino/local_setup.sh
+-- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ros_arduino/local_setup.zsh
+-- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ros_arduino/local_setup.dsv
+-- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ros_arduino/package.dsv
+-- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ament_index/resource_index/packages/ros_arduino
+-- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ros_arduino/cmake/ros_arduinoConfig.cmake
+-- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ros_arduino/cmake/ros_arduinoConfig-version.cmake
+-- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ros_arduino/package.xml
+-- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/lib/ros_arduino/test_protocol
+-- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/include/ros_arduino/ros_arduino/Data.h
+-- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/include/ros_arduino/ros_arduino/ROS2Bool.h
+-- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/include/ros_arduino/ros_arduino/ROS2Msg.h
+-- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/include/ros_arduino/ros_arduino/ROS2MsgTypes.h
+-- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/include/ros_arduino/ros_arduino/SerialMessage.h
+-- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/include/ros_arduino/ros_arduino/SerialMessageTypes.h
+-- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/include/ros_arduino/ros_arduino/device_manager.h

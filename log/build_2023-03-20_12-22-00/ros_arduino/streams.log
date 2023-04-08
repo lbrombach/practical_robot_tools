@@ -1,0 +1,30 @@
+[0.012s] Invoking command in '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\033[01;32m\]\u@\h: \[\033[34m\]\W\[\033[00;32m\] $(git_branch)\[\033[00m\]$ /usr/bin/cmake --build /home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino -- -j12 -l12
+[0.050s] [35m[1mConsolidate compiler generated dependencies of target test_protocol[0m
+[0.068s] [ 33%] [32mBuilding CXX object CMakeFiles/test_protocol.dir/src/SerialMessage.cpp.o[0m
+[0.313s] /home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp: In instantiation of ‘[01m[KT SerialMessage<T>::unpack(const std::vector<unsigned char>&) [with T = bool][m[K’:
+[0.314s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:4:16:[m[K   required from here
+[0.314s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:104:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SerialMessage<bool>[m[K’ has no member named ‘[01m[Ktopic_length[m[K’
+[0.314s]   104 |     [01;31m[Ktemp.topic_length[m[K = ((uint16_t)packet[5] << 8) | (uint16_t)packet[6];
+[0.314s]       |     [01;31m[K~~~~~^~~~~~~~~~~~[m[K
+[0.314s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:106:62:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SerialMessage<bool>[m[K’ has no member named ‘[01m[Ktopic_length[m[K’
+[0.314s]   106 |     temp.topic(packet.begin() + 7, packet.begin() + 7 + [01;31m[Ktemp.topic_length[m[K);
+[0.314s]       |                                                         [01;31m[K~~~~~^~~~~~~~~~~~[m[K
+[0.314s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:109:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SerialMessage<bool>[m[K’ has no member named ‘[01m[Kdata_length[m[K’
+[0.314s]   109 |     [01;31m[Ktemp.data_length[m[K = ((uint16_t)packet[7 + temp.topic_length] << 8) | (uint16_t)packet[7 + temp.topic_length + 1];
+[0.314s]       |     [01;31m[K~~~~~^~~~~~~~~~~[m[K
+[0.314s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:109:51:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SerialMessage<bool>[m[K’ has no member named ‘[01m[Ktopic_length[m[K’
+[0.314s]   109 |     temp.data_length = ((uint16_t)packet[7 + [01;31m[Ktemp.topic_length[m[K] << 8) | (uint16_t)packet[7 + temp.topic_length + 1];
+[0.314s]       |                                              [01;31m[K~~~~~^~~~~~~~~~~~[m[K
+[0.314s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:109:99:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SerialMessage<bool>[m[K’ has no member named ‘[01m[Ktopic_length[m[K’
+[0.314s]   109 |     temp.data_length = ((uint16_t)packet[7 + temp.topic_length] << 8) | (uint16_t)packet[7 + [01;31m[Ktemp.topic_length[m[K + 1];
+[0.314s]       |                                                                                              [01;31m[K~~~~~^~~~~~~~~~~~[m[K
+[0.314s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:111:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SerialMessage<bool>[m[K’ has no member named ‘[01m[Ktopic_length[m[K’
+[0.314s]   111 |     temp.data.push_back(packet[7 + [01;31m[Ktemp.topic_length[m[K + 2] != 0);
+[0.315s]       |                                    [01;31m[K~~~~~^~~~~~~~~~~~[m[K
+[0.315s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:117:12:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[KSerialMessage<bool>[m[K’ to ‘[01m[Kbool[m[K’ in return
+[0.315s]   117 |     return [01;31m[Ktemp[m[K;
+[0.315s]       |            [01;31m[K^~~~[m[K
+[0.350s] gmake[2]: *** [CMakeFiles/test_protocol.dir/build.make:90: CMakeFiles/test_protocol.dir/src/SerialMessage.cpp.o] Error 1
+[0.350s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/test_protocol.dir/all] Error 2
+[0.350s] gmake: *** [Makefile:146: all] Error 2
+[0.352s] Invoked command in '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\033[01;32m\]\u@\h: \[\033[34m\]\W\[\033[00;32m\] $(git_branch)\[\033[00m\]$ /usr/bin/cmake --build /home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino -- -j12 -l12

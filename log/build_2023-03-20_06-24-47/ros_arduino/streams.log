@@ -1,0 +1,174 @@
+[0.011s] Invoking command in '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\033[01;32m\]\u@\h: \[\033[34m\]\W\[\033[00;32m\] $(git_branch)\[\033[00m\]$ /usr/bin/cmake /home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino
+[0.194s] -- The C compiler identification is GNU 11.3.0
+[0.258s] -- The CXX compiler identification is GNU 11.3.0
+[0.267s] -- Detecting C compiler ABI info
+[0.357s] -- Detecting C compiler ABI info - done
+[0.365s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.366s] -- Detecting C compile features
+[0.366s] -- Detecting C compile features - done
+[0.370s] -- Detecting CXX compiler ABI info
+[0.449s] -- Detecting CXX compiler ABI info - done
+[0.456s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.456s] -- Detecting CXX compile features
+[0.457s] -- Detecting CXX compile features - done
+[0.461s] -- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.123s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+[1.186s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.220s] -- Found rclcpp: 16.0.3 (/opt/ros/humble/share/rclcpp/cmake)
+[1.278s] -- Found rosidl_generator_c: 3.1.3 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.284s] -- Found rosidl_adapter: 3.1.3 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.293s] -- Found rosidl_generator_cpp: 3.1.3 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.308s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.342s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.418s] -- Found rmw_implementation_cmake: 6.1.0 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.421s] -- Found rmw_fastrtps_cpp: 6.2.1 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.520s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.551s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.603s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.765s] -- Found rclcpp_components: 16.0.1 (/opt/ros/humble/share/rclcpp_components/cmake)
+[1.910s] -- Configuring done
+[1.922s] -- Generating done
+[1.924s] -- Build files have been written to: /home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino
+[1.935s] Invoked command in '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\033[01;32m\]\u@\h: \[\033[34m\]\W\[\033[00;32m\] $(git_branch)\[\033[00m\]$ /usr/bin/cmake /home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino
+[1.936s] Invoking command in '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\033[01;32m\]\u@\h: \[\033[34m\]\W\[\033[00;32m\] $(git_branch)\[\033[00m\]$ /usr/bin/cmake --build /home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino -- -j12 -l12
+[1.985s] [ 75%] [32mBuilding CXX object CMakeFiles/test_protocol.dir/src/test_protocol.cpp.o[0m
+[1.986s] [ 75%] [32mBuilding CXX object CMakeFiles/test_protocol.dir/src/ROS2Bool.cpp.o[0m
+[1.986s] [ 75%] [32mBuilding CXX object CMakeFiles/test_protocol.dir/src/ROS2Msg.cpp.o[0m
+[2.183s] In file included from [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:1[m[K:
+[2.183s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/include/ros_arduino/ROS2Bool.h:7:1:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+[2.183s]     7 | [01;31m[K{[m[K
+[2.183s]       | [01;31m[K^[m[K
+[2.183s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/include/ros_arduino/ROS2Bool.h:17:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kbool ROS2Bool::unpack(const std::vector<unsigned char>&)[m[K’ marked ‘[01m[Koverride[m[K’, but does not override
+[2.183s]    17 |   bool [01;31m[Kunpack[m[K(const std::vector<uint8_t> &packet) override;
+[2.183s]       |        [01;31m[K^~~~~~[m[K
+[2.183s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/include/ros_arduino/ROS2Bool.h:19:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd::string ROS2Bool::toString() const[m[K’ marked ‘[01m[Koverride[m[K’, but does not override
+[2.183s]    19 |   std::string [01;31m[KtoString[m[K() const override;
+[2.183s]       |               [01;31m[K^~~~~~~~[m[K
+[2.282s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:11:1:[m[K [01;31m[Kerror: [m[K‘[01m[KROS2Bool[m[K’ is not a template
+[2.282s]    11 | [01;31m[KROS2Bool[m[K<T>::ROS2Bool() : ROS2Msg(MessageType::MSG_TYPE_BOOL, ""), data(false)
+[2.282s]       | [01;31m[K^~~~~~~~[m[K
+[2.282s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:11:23:[m[K [01;31m[Kerror: [m[K‘[01m[KROS2Bool ROS2Bool()[m[K’ should have been declared inside ‘[01m[K::[m[K’
+[2.282s]    11 | ROS2Bool<T>::ROS2Bool([01;31m[K)[m[K : ROS2Msg(MessageType::MSG_TYPE_BOOL, ""), data(false)
+[2.282s]       |                       [01;31m[K^[m[K
+[2.283s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:[m[K In function ‘[01m[KROS2Bool ROS2Bool()[m[K’:
+[2.283s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:11:27:[m[K [01;31m[Kerror: [m[Konly constructors take member initializers
+[2.283s]    11 | ROS2Bool<T>::ROS2Bool() : [01;31m[KROS2Msg[m[K(MessageType::MSG_TYPE_BOOL, ""), data(false)
+[2.283s]       |                           [01;31m[K^~~~~~~[m[K
+[2.283s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:13:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[2.283s]    13 | [01;35m[K}[m[K
+[2.283s]       | [01;35m[K^[m[K
+[2.283s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:[m[K At global scope:
+[2.283s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:16:1:[m[K [01;31m[Kerror: [m[Kfunction template-id ‘[01m[KROS2Bool<T>[m[K’ in nested-name-specifier
+[2.283s]    16 | [01;31m[KROS2Bool<T>[m[K::ROS2Bool(const ROS2Bool &other) : ROS2Msg(other), data(other.data) {}
+[2.283s]       | [01;31m[K^~~~~~~~~~~[m[K
+[2.283s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:11:12:[m[K [01;36m[Knote: [m[K‘[01m[Ktemplate<class T> ROS2Bool ROS2Bool()[m[K’ declared here
+[2.283s]    11 | ROS2Bool<T>[01;36m[K::[m[KROS2Bool() : ROS2Msg(MessageType::MSG_TYPE_BOOL, ""), data(false)
+[2.283s]       |            [01;36m[K^~[m[K
+[2.283s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:16:29:[m[K [01;31m[Kerror: [m[K‘[01m[KROS2Bool[m[K’ does not name a type
+[2.283s]    16 | ROS2Bool<T>::ROS2Bool(const [01;31m[KROS2Bool[m[K &other) : ROS2Msg(other), data(other.data) {}
+[2.283s]       |                             [01;31m[K^~~~~~~~[m[K
+[2.283s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:[m[K In function ‘[01m[Kint ROS2Bool(const int&)[m[K’:
+[2.284s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:16:48:[m[K [01;31m[Kerror: [m[Konly constructors take member initializers
+[2.284s]    16 | ROS2Bool<T>::ROS2Bool(const ROS2Bool &other) : [01;31m[KROS2Msg[m[K(other), data(other.data) {}
+[2.284s]       |                                                [01;31m[K^~~~~~~[m[K
+[2.284s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:16:75:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kdata[m[K’ in ‘[01m[Kother[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+[2.284s]    16 | ROS2Bool<T>::ROS2Bool(const ROS2Bool &other) : ROS2Msg(other), data(other.[01;31m[Kdata[m[K) {}
+[2.284s]       |                                                                           [01;31m[K^~~~[m[K
+[2.284s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:16:82:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[2.284s]    16 | ROS2Bool<T>::ROS2Bool(const ROS2Bool &other) : ROS2Msg(other), data(other.data) {[01;35m[K}[m[K
+[2.284s]       |                                                                                  [01;35m[K^[m[K
+[2.284s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:[m[K At global scope:
+[2.284s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:20:1:[m[K [01;31m[Kerror: [m[Kfunction template-id ‘[01m[KROS2Bool<T>[m[K’ in nested-name-specifier
+[2.284s]    20 | [01;31m[KROS2Bool<T>[m[K::ROS2Bool(const std::string &_topic_name, bool _data) : ROS2Msg(MessageType::MSG_TYPE_BOOL, _topic_name), data(_data)
+[2.284s]       | [01;31m[K^~~~~~~~~~~[m[K
+[2.285s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:[m[K In function ‘[01m[Kint ROS2Bool(const string&, bool)[m[K’:
+[2.285s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:20:69:[m[K [01;31m[Kerror: [m[Konly constructors take member initializers
+[2.285s]    20 | ROS2Bool<T>::ROS2Bool(const std::string &_topic_name, bool _data) : [01;31m[KROS2Msg[m[K(MessageType::MSG_TYPE_BOOL, _topic_name), data(_data)
+[2.285s]       |                                                                     [01;31m[K^~~~~~~[m[K
+[2.285s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:22:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[2.285s]    22 | [01;35m[K}[m[K
+[2.285s]       | [01;35m[K^[m[K
+[2.285s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:[m[K At global scope:
+[2.285s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:25:1:[m[K [01;31m[Kerror: [m[Kfunction template-id ‘[01m[KROS2Bool<T>[m[K’ in nested-name-specifier
+[2.285s]    25 | [01;31m[KROS2Bool<T>[m[K::~ROS2Bool() {}
+[2.285s]       | [01;31m[K^~~~~~~~~~~[m[K
+[2.285s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:33:22:[m[K [01;31m[Kerror: [m[Kfunction template-id ‘[01m[KROS2Bool<T>[m[K’ in nested-name-specifier
+[2.285s]    33 | std::vector<uint8_t> [01;31m[KROS2Bool<T>[m[K::pack()
+[2.285s]       |                      [01;31m[K^~~~~~~~~~~[m[K
+[2.285s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:[m[K In function ‘[01m[Kstd::vector<unsigned char> pack()[m[K’:
+[2.285s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:35:12:[m[K [01;31m[Kerror: [m[K‘[01m[Ktemplate<class T> class ROS2Msg[m[K’ used without template arguments
+[2.285s]    35 |     return [01;31m[KROS2Msg[m[K::pack(data);
+[2.285s]       |            [01;31m[K^~~~~~~[m[K
+[2.286s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:[m[K At global scope:
+[2.286s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:68:6:[m[K [01;31m[Kerror: [m[Kfunction template-id ‘[01m[KROS2Bool<T>[m[K’ in nested-name-specifier
+[2.286s]    68 | bool [01;31m[KROS2Bool<T>[m[K::unpack(const std::vector<uint8_t> &packet)
+[2.286s]       |      [01;31m[K^~~~~~~~~~~[m[K
+[2.286s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:[m[K In function ‘[01m[Kbool unpack(const std::vector<unsigned char>&)[m[K’:
+[2.286s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:71:22:[m[K [01;31m[Kerror: [m[K‘[01m[Ktemplate<class T> class ROS2Msg[m[K’ used without template arguments
+[2.286s]    71 |     if (packet[0] != [01;31m[KROS2Msg[m[K::START_SIGNAL[0] ||
+[2.286s]       |                      [01;31m[K^~~~~~~[m[K
+[2.286s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:72:22:[m[K [01;31m[Kerror: [m[K‘[01m[Ktemplate<class T> class ROS2Msg[m[K’ used without template arguments
+[2.286s]    72 |         packet[1] != [01;31m[KROS2Msg[m[K::START_SIGNAL[1] ||
+[2.286s]       |                      [01;31m[K^~~~~~~[m[K
+[2.286s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:73:22:[m[K [01;31m[Kerror: [m[K‘[01m[Ktemplate<class T> class ROS2Msg[m[K’ used without template arguments
+[2.286s]    73 |         packet[2] != [01;31m[KROS2Msg[m[K::START_SIGNAL[2])
+[2.286s]       |                      [01;31m[K^~~~~~~[m[K
+[2.286s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:76:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage_type[m[K’ was not declared in this scope; did you mean ‘[01m[KMessageType[m[K’?
+[2.286s]    76 |         [01;31m[Kmessage_type[m[K = MessageType::MSG_TYPE_NONE;
+[2.287s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[2.287s]       |         [32m[KMessageType[m[K
+[2.288s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:91:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage_type[m[K’ was not declared in this scope; did you mean ‘[01m[KMessageType[m[K’?
+[2.288s]    91 |         [01;31m[Kmessage_type[m[K = MessageType::MSG_TYPE_NONE;
+[2.288s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[2.288s]       |         [32m[KMessageType[m[K
+[2.289s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:100:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage_type[m[K’ was not declared in this scope; did you mean ‘[01m[KMessageType[m[K’?
+[2.289s]   100 |         [01;31m[Kmessage_type[m[K = MessageType::MSG_TYPE_NONE;
+[2.289s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[2.289s]       |         [32m[KMessageType[m[K
+[2.290s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:115:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage_type[m[K’ was not declared in this scope; did you mean ‘[01m[KMessageType[m[K’?
+[2.290s]   115 |     [01;31m[Kmessage_type[m[K = MessageType::MSG_TYPE_BOOL;
+[2.291s]       |     [01;31m[K^~~~~~~~~~~~[m[K
+[2.291s]       |     [32m[KMessageType[m[K
+[2.291s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:116:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktopic[m[K’ was not declared in this scope
+[2.291s]   116 |     [01;31m[Ktopic[m[K = topic_name;
+[2.291s]       |     [01;31m[K^~~~~[m[K
+[2.291s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:[m[K At global scope:
+[2.291s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:122:13:[m[K [01;31m[Kerror: [m[Kfunction template-id ‘[01m[KROS2Bool<T>[m[K’ in nested-name-specifier
+[2.292s]   122 | std::string [01;31m[KROS2Bool<T>[m[K::toString() const
+[2.292s]       |             [01;31m[K^~~~~~~~~~~[m[K
+[2.292s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:122:37:[m[K [01;31m[Kerror: [m[Knon-member function ‘[01m[Kstd::string toString()[m[K’ cannot have cv-qualifier
+[2.292s]   122 | std::string ROS2Bool<T>::toString() [01;31m[Kconst[m[K
+[2.292s]       |                                     [01;31m[K^~~~~[m[K
+[2.292s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:[m[K In function ‘[01m[Kstd::string toString()[m[K’:
+[2.292s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:124:12:[m[K [01;31m[Kerror: [m[K‘[01m[Ktopic[m[K’ was not declared in this scope
+[2.292s]   124 |     return [01;31m[Ktopic[m[K + (data ? " true" : " false");
+[2.292s]       |            [01;31m[K^~~~~[m[K
+[2.292s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:124:38:[m[K [01;31m[Kerror: [m[Kcannot resolve overloaded function ‘[01m[Kdata[m[K’ based on conversion to type ‘[01m[Kbool[m[K’
+[2.292s]   124 |     return topic + (data ? " true" : [01;31m[K" false"[m[K);
+[2.293s]       |                                      [01;31m[K^~~~~~~~[m[K
+[2.319s] gmake[2]: *** [CMakeFiles/test_protocol.dir/build.make:90: CMakeFiles/test_protocol.dir/src/ROS2Bool.cpp.o] Error 1
+[2.319s] gmake[2]: *** Waiting for unfinished jobs....
+[2.347s] In file included from [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/test_protocol.cpp:1[m[K:
+[2.347s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/include/ros_arduino/ROS2Bool.h:7:1:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+[2.347s]     7 | [01;31m[K{[m[K
+[2.347s]       | [01;31m[K^[m[K
+[2.347s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/include/ros_arduino/ROS2Bool.h:17:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kbool ROS2Bool::unpack(const std::vector<unsigned char>&)[m[K’ marked ‘[01m[Koverride[m[K’, but does not override
+[2.347s]    17 |   bool [01;31m[Kunpack[m[K(const std::vector<uint8_t> &packet) override;
+[2.348s]       |        [01;31m[K^~~~~~[m[K
+[2.348s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/include/ros_arduino/ROS2Bool.h:19:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd::string ROS2Bool::toString() const[m[K’ marked ‘[01m[Koverride[m[K’, but does not override
+[2.348s]    19 |   std::string [01;31m[KtoString[m[K() const override;
+[2.348s]       |               [01;31m[K^~~~~~~~[m[K
+[4.039s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/test_protocol.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[4.039s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/test_protocol.cpp:12:3:[m[K [01;31m[Kerror: [m[K‘[01m[KROS2Bool[m[K’ is not a template
+[4.039s]    12 |   [01;31m[KROS2Bool[m[K<bool> testBool("test_bool", true);
+[4.039s]       |   [01;31m[K^~~~~~~~[m[K
+[4.044s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/test_protocol.cpp:50:3:[m[K [01;31m[Kerror: [m[K‘[01m[KROS2Bool[m[K’ is not a template
+[4.044s]    50 |   [01;31m[KROS2Bool[m[K<bool> resultBool;
+[4.044s]       |   [01;31m[K^~~~~~~~[m[K
+[4.045s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/test_protocol.cpp:60:3:[m[K [01;31m[Kerror: [m[K‘[01m[KROS2Bool[m[K’ is not a template
+[4.045s]    60 |   [01;31m[KROS2Bool[m[K<bool> copiedMsg(resultBool);
+[4.045s]       |   [01;31m[K^~~~~~~~[m[K
+[4.397s] gmake[2]: *** [CMakeFiles/test_protocol.dir/build.make:76: CMakeFiles/test_protocol.dir/src/test_protocol.cpp.o] Error 1
+[4.398s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/test_protocol.dir/all] Error 2
+[4.398s] gmake: *** [Makefile:146: all] Error 2
+[4.400s] Invoked command in '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\033[01;32m\]\u@\h: \[\033[34m\]\W\[\033[00;32m\] $(git_branch)\[\033[00m\]$ /usr/bin/cmake --build /home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino -- -j12 -l12

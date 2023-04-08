@@ -1,0 +1,57 @@
+[35m[1mConsolidate compiler generated dependencies of target test_protocol[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/test_protocol.dir/src/SerialMessage.cpp.o[0m
+/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp: In instantiation of ‘[01m[Kstd::vector<unsigned char> SerialMessage<T>::pack() const [with T = bool][m[K’:
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:4:16:[m[K   required from here
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:48:22:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator&[m[K’ (operand types are ‘[01m[Kconst std::vector<bool, std::allocator<bool> >[m[K’ and ‘[01m[Kint[m[K’)
+   48 |     uint8_t d = [01;31m[Kdata & 0xff[m[K;
+      |                 [01;31m[K~~~~~^~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/ios:42[m[K,
+                 from [01m[K/usr/include/c++/11/ostream:38[m[K,
+                 from [01m[K/usr/include/c++/11/iostream:39[m[K,
+                 from [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:2[m[K:
+[01m[K/usr/include/c++/11/bits/ios_base.h:83:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::_Ios_Fmtflags std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)[m[K’
+   83 |   [01;36m[Koperator[m[K&(_Ios_Fmtflags __a, _Ios_Fmtflags __b)
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/ios_base.h:83:27:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst std::vector<bool, std::allocator<bool> >[m[K’ to ‘[01m[Kstd::_Ios_Fmtflags[m[K’
+   83 |   operator&([01;36m[K_Ios_Fmtflags __a[m[K, _Ios_Fmtflags __b)
+      |             [01;36m[K~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/11/bits/ios_base.h:125:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::_Ios_Openmode std::operator&(std::_Ios_Openmode, std::_Ios_Openmode)[m[K’
+  125 |   [01;36m[Koperator[m[K&(_Ios_Openmode __a, _Ios_Openmode __b)
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/ios_base.h:125:27:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst std::vector<bool, std::allocator<bool> >[m[K’ to ‘[01m[Kstd::_Ios_Openmode[m[K’
+  125 |   operator&([01;36m[K_Ios_Openmode __a[m[K, _Ios_Openmode __b)
+      |             [01;36m[K~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/11/bits/ios_base.h:165:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::_Ios_Iostate std::operator&(std::_Ios_Iostate, std::_Ios_Iostate)[m[K’
+  165 |   [01;36m[Koperator[m[K&(_Ios_Iostate __a, _Ios_Iostate __b)
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/ios_base.h:165:26:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst std::vector<bool, std::allocator<bool> >[m[K’ to ‘[01m[Kstd::_Ios_Iostate[m[K’
+  165 |   operator&([01;36m[K_Ios_Iostate __a[m[K, _Ios_Iostate __b)
+      |             [01;36m[K~~~~~~~~~~~~~^~~[m[K
+/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp: In instantiation of ‘[01m[KT SerialMessage<T>::unpack(const std::vector<unsigned char>&) [with T = bool][m[K’:
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:4:16:[m[K   required from here
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:93:44:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kint[m[K’ to ‘[01m[KMessageType[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   93 |     temp.type = ((uint16_t)packet[3] << 8) | (uint16_t)packet[4];
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:105:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SerialMessage<bool>[m[K’ has no member named ‘[01m[Ktopic_length[m[K’
+  105 |     [01;31m[Ktemp.topic_length[m[K = ((uint16_t)packet[5] << 8) | (uint16_t)packet[6];
+      |     [01;31m[K~~~~~^~~~~~~~~~~~[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:107:62:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SerialMessage<bool>[m[K’ has no member named ‘[01m[Ktopic_length[m[K’
+  107 |     temp.topic(packet.begin() + 7, packet.begin() + 7 + [01;31m[Ktemp.topic_length[m[K);
+      |                                                         [01;31m[K~~~~~^~~~~~~~~~~~[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:110:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SerialMessage<bool>[m[K’ has no member named ‘[01m[Kdata_length[m[K’
+  110 |     [01;31m[Ktemp.data_length[m[K = ((uint16_t)packet[7 + temp.topic_length] << 8) | (uint16_t)packet[7 + temp.topic_length + 1];
+      |     [01;31m[K~~~~~^~~~~~~~~~~[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:110:51:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SerialMessage<bool>[m[K’ has no member named ‘[01m[Ktopic_length[m[K’
+  110 |     temp.data_length = ((uint16_t)packet[7 + [01;31m[Ktemp.topic_length[m[K] << 8) | (uint16_t)packet[7 + temp.topic_length + 1];
+      |                                              [01;31m[K~~~~~^~~~~~~~~~~~[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:110:99:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SerialMessage<bool>[m[K’ has no member named ‘[01m[Ktopic_length[m[K’
+  110 |     temp.data_length = ((uint16_t)packet[7 + temp.topic_length] << 8) | (uint16_t)packet[7 + [01;31m[Ktemp.topic_length[m[K + 1];
+      |                                                                                              [01;31m[K~~~~~^~~~~~~~~~~~[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:112:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SerialMessage<bool>[m[K’ has no member named ‘[01m[Ktopic_length[m[K’
+  112 |     temp.data.push_back(packet[7 + [01;31m[Ktemp.topic_length[m[K + 2] != 0);
+      |                                    [01;31m[K~~~~~^~~~~~~~~~~~[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:118:12:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[KSerialMessage<bool>[m[K’ to ‘[01m[Kbool[m[K’ in return
+  118 |     return [01;31m[Ktemp[m[K;
+      |            [01;31m[K^~~~[m[K
+gmake[2]: *** [CMakeFiles/test_protocol.dir/build.make:90: CMakeFiles/test_protocol.dir/src/SerialMessage.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/test_protocol.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

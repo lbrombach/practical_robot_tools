@@ -1,0 +1,82 @@
+[0.000000] (-) TimerEvent: {}
+[0.000951] (-) JobUnselected: {'identifier': 'rplidar_motor_control'}
+[0.000986] (ros_arduino) JobQueued: {'identifier': 'ros_arduino', 'dependencies': OrderedDict()}
+[0.001009] (ros_arduino) JobStarted: {'identifier': 'ros_arduino'}
+[0.011241] (ros_arduino) JobProgress: {'identifier': 'ros_arduino', 'progress': 'cmake'}
+[0.011836] (ros_arduino) JobProgress: {'identifier': 'ros_arduino', 'progress': 'build'}
+[0.012499] (ros_arduino) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino', '--', '-j12', '-l12'], 'cwd': '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_CA:en'), ('USER', 'lloyd'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/lloyd/cart_ws/install/rplidar_ros/lib:/home/lloyd/cart_ws/install/microxrcedds_agent/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-11.7/lib64:'), ('HOME', '/home/lloyd'), ('OLDPWD', '/home/lloyd/cart_ws'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PS1', '\\[\\033[01;32m\\]\\u@\\h: \\[\\033[34m\\]\\W\\[\\033[00;32m\\] $(git_branch)\\[\\033[00m\\]$'), ('MANAGERPID', '2321'), ('SYSTEMD_EXEC_PID', '2971'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('LIBVIRT_DEFAULT_URI', 'qemu:///system'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '64646'), ('COLCON_PREFIX_PATH', '/home/lloyd/cart_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'lloyd'), ('JOURNAL_STREAM', '8:34767'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'lloyd'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/lloyd/cart_ws/install/microxrcedds_agent/bin:/opt/ros/humble/bin:/usr/local/cuda-11.7/bin:/home/lloyd/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/lloyd/Scripts'), ('SESSION_MANAGER', 'local/msi-raider:@/tmp/.ICE-unix/2686,unix/msi-raider:/tmp/.ICE-unix/2686'), ('INVOCATION_ID', 'a0d8b9363c5b41fab9c24224d2744e9c'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_CA.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/lloyd/cart_ws/install/rplidar_ros:/home/lloyd/cart_ws/install/rplidar_motor_control:/home/lloyd/cart_ws/install/ros_arduino:/home/lloyd/cart_ws/install/cart_tests:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:2a0d7649-4025-4513-b26e-c1401410ebf1'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino'), ('TURTLEBOT3_MODEL', 'burger'), ('CUDA_HOME', '/usr/local/cuda-11.7'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/lloyd/cart_ws/install/rplidar_ros:/home/lloyd/cart_ws/install/rplidar_motor_control:/home/lloyd/cart_ws/install/ros_arduino:/home/lloyd/cart_ws/install/microxrcedds_agent:/home/lloyd/cart_ws/install/cart_tests:/opt/ros/humble')]), 'shell': False}
+[0.062591] (ros_arduino) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target test_protocol\x1b[0m\n'}
+[0.083655] (ros_arduino) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/test_protocol.dir/src/test_protocol.cpp.o\x1b[0m\n'}
+[0.100032] (-) TimerEvent: {}
+[0.200285] (-) TimerEvent: {}
+[0.300547] (-) TimerEvent: {}
+[0.400845] (-) TimerEvent: {}
+[0.501145] (-) TimerEvent: {}
+[0.601459] (-) TimerEvent: {}
+[0.701727] (-) TimerEvent: {}
+[0.801988] (-) TimerEvent: {}
+[0.902253] (-) TimerEvent: {}
+[1.002515] (-) TimerEvent: {}
+[1.102775] (-) TimerEvent: {}
+[1.203048] (-) TimerEvent: {}
+[1.303315] (-) TimerEvent: {}
+[1.403582] (-) TimerEvent: {}
+[1.503857] (-) TimerEvent: {}
+[1.604131] (-) TimerEvent: {}
+[1.704397] (-) TimerEvent: {}
+[1.804635] (-) TimerEvent: {}
+[1.904936] (-) TimerEvent: {}
+[2.005203] (-) TimerEvent: {}
+[2.053066] (ros_arduino) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/test_protocol.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint main(int, char**)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.053219] (ros_arduino) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/test_protocol.cpp:12:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[KSerialMessage<bool>::SerialMessage(const char [10], bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.053287] (ros_arduino) StderrLine: {'line': b'   12 |   SerialMessage<bool> testBool("test_bool", true\x1b[01;31m\x1b[K)\x1b[m\x1b[K;\n'}
+[2.053344] (ros_arduino) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[2.053498] (ros_arduino) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/test_protocol.cpp:1\x1b[m\x1b[K:\n'}
+[2.053578] (ros_arduino) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/include/ros_arduino/SerialMessage.h:19:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KSerialMessage<T>::SerialMessage(MessageType, const string&) [with T = bool; std::string = std::__cxx11::basic_string<char>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.053640] (ros_arduino) StderrLine: {'line': b'   19 |     \x1b[01;36m\x1b[KSerialMessage\x1b[m\x1b[K(MessageType type, const std::string &topic);\n'}
+[2.053704] (ros_arduino) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.053757] (ros_arduino) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/include/ros_arduino/SerialMessage.h:19:31:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kconst char [10]\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[KMessageType\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.053812] (ros_arduino) StderrLine: {'line': b'   19 |     SerialMessage(\x1b[01;36m\x1b[KMessageType type\x1b[m\x1b[K, const std::string &topic);\n'}
+[2.053864] (ros_arduino) StderrLine: {'line': b'      |                   \x1b[01;36m\x1b[K~~~~~~~~~~~~^~~~\x1b[m\x1b[K\n'}
+[2.053916] (ros_arduino) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/include/ros_arduino/SerialMessage.h:18:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KSerialMessage<T>::SerialMessage(const SerialMessage<T>&) [with T = bool]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.053968] (ros_arduino) StderrLine: {'line': b'   18 |     \x1b[01;36m\x1b[KSerialMessage\x1b[m\x1b[K(const SerialMessage &other);\n'}
+[2.054019] (ros_arduino) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.054070] (ros_arduino) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/include/ros_arduino/SerialMessage.h:18:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 2 provided\n'}
+[2.054121] (ros_arduino) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/include/ros_arduino/SerialMessage.h:17:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KSerialMessage<T>::SerialMessage() [with T = bool]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.054173] (ros_arduino) StderrLine: {'line': b'   17 |     \x1b[01;36m\x1b[KSerialMessage\x1b[m\x1b[K();\n'}
+[2.054224] (ros_arduino) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.054274] (ros_arduino) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/include/ros_arduino/SerialMessage.h:17:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 0 arguments, 2 provided\n'}
+[2.059812] (ros_arduino) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/test_protocol.cpp:57:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno match for \xe2\x80\x98\x1b[01m\x1b[Koperator=\x1b[m\x1b[K\xe2\x80\x99 (operand types are \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<bool, std::allocator<bool> >\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kbool\x1b[m\x1b[K\xe2\x80\x99)\n'}
+[2.059917] (ros_arduino) StderrLine: {'line': b'   57 |   resultBool.data = \x1b[01;31m\x1b[Kfalse\x1b[m\x1b[K;\n'}
+[2.059982] (ros_arduino) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.060159] (ros_arduino) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/vector:68\x1b[m\x1b[K,\n'}
+[2.060220] (ros_arduino) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/include/ros_arduino/SerialMessage.h:5\x1b[m\x1b[K,\n'}
+[2.060277] (ros_arduino) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/test_protocol.cpp:1\x1b[m\x1b[K:\n'}
+[2.060330] (ros_arduino) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_bvector.h:736:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<bool, _Alloc>& std::vector<bool, _Alloc>::operator=(const std::vector<bool, _Alloc>&) [with _Alloc = std::allocator<bool>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.060416] (ros_arduino) StderrLine: {'line': b'  736 |       \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const vector& __x)\n'}
+[2.060483] (ros_arduino) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[2.060555] (ros_arduino) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_bvector.h:736:31:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kbool\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst std::vector<bool, std::allocator<bool> >&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.060638] (ros_arduino) StderrLine: {'line': b'  736 |       operator=(\x1b[01;36m\x1b[Kconst vector& __x\x1b[m\x1b[K)\n'}
+[2.060790] (ros_arduino) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[2.060911] (ros_arduino) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_bvector.h:767:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<bool, _Alloc>& std::vector<bool, _Alloc>::operator=(std::vector<bool, _Alloc>&&) [with _Alloc = std::allocator<bool>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.061000] (ros_arduino) StderrLine: {'line': b'  767 |       \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(vector&& __x) noexcept(_Bit_alloc_traits::_S_nothrow_move())\n'}
+[2.061070] (ros_arduino) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[2.061136] (ros_arduino) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_bvector.h:767:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kbool\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<bool, std::allocator<bool> >&&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.061204] (ros_arduino) StderrLine: {'line': b'  767 |       operator=(\x1b[01;36m\x1b[Kvector&& __x\x1b[m\x1b[K) noexcept(_Bit_alloc_traits::_S_nothrow_move())\n'}
+[2.061269] (ros_arduino) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[2.061334] (ros_arduino) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_bvector.h:792:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<bool, _Alloc>& std::vector<bool, _Alloc>::operator=(std::initializer_list<bool>) [with _Alloc = std::allocator<bool>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.061401] (ros_arduino) StderrLine: {'line': b'  792 |       \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(initializer_list<bool> __l)\n'}
+[2.061466] (ros_arduino) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[2.061529] (ros_arduino) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_bvector.h:792:40:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kbool\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kstd::initializer_list<bool>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.061595] (ros_arduino) StderrLine: {'line': b'  792 |       operator=(\x1b[01;36m\x1b[Kinitializer_list<bool> __l\x1b[m\x1b[K)\n'}
+[2.061658] (ros_arduino) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[2.105330] (-) TimerEvent: {}
+[2.205595] (-) TimerEvent: {}
+[2.305862] (-) TimerEvent: {}
+[2.406162] (-) TimerEvent: {}
+[2.418889] (ros_arduino) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/test_protocol.dir/build.make:76: CMakeFiles/test_protocol.dir/src/test_protocol.cpp.o] Error 1\n'}
+[2.419096] (ros_arduino) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/test_protocol.dir/all] Error 2\n'}
+[2.419277] (ros_arduino) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[2.421500] (ros_arduino) CommandEnded: {'returncode': 2}
+[2.462687] (ros_arduino) JobEnded: {'identifier': 'ros_arduino', 'rc': 2}
+[2.473355] (-) EventReactorShutdown: {}

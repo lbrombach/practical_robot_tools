@@ -1,0 +1,71 @@
+[0.013s] Invoking command in '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\033[01;32m\]\u@\h: \[\033[34m\]\W\[\033[00;32m\] $(git_branch)\[\033[00m\]$ /usr/bin/cmake --build /home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino -- -j12 -l12
+[0.050s] [35m[1mConsolidate compiler generated dependencies of target test_protocol[0m
+[0.071s] [ 33%] [32mBuilding CXX object CMakeFiles/test_protocol.dir/src/SerialMessage.cpp.o[0m
+[0.301s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:[m[K In member function ‘[01m[KT SerialMessage<T>::unpack(const std::vector<unsigned char>&)[m[K’:
+[0.301s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:62:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcout[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::cout[m[K’?
+[0.301s]    62 |         [01;31m[Kcout[m[K << "Error - bad packet start" << endl;
+[0.301s]       |         [01;31m[K^~~~[m[K
+[0.301s]       |         [32m[Kstd::cout[m[K
+[0.301s] In file included from [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:2[m[K:
+[0.301s] [01m[K/usr/include/c++/11/iostream:61:18:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::cout[m[K’ declared here
+[0.302s]    61 |   extern ostream [01;36m[Kcout[m[K;          /// Linked to standard output
+[0.302s]       |                  [01;36m[K^~~~[m[K
+[0.302s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:62:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kendl[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::endl[m[K’?
+[0.302s]    62 |         cout << "Error - bad packet start" << [01;31m[Kendl[m[K;
+[0.302s]       |                                               [01;31m[K^~~~[m[K
+[0.302s]       |                                               [32m[Kstd::endl[m[K
+[0.302s] In file included from [01m[K/usr/include/c++/11/iostream:39[m[K,
+[0.302s]                  from [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:2[m[K:
+[0.302s] [01m[K/usr/include/c++/11/ostream:684:5:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::endl[m[K’ declared here
+[0.302s]   684 |     [01;36m[Kendl[m[K(basic_ostream<_CharT, _Traits>& __os)
+[0.302s]       |     [01;36m[K^~~~[m[K
+[0.302s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:77:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcout[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::cout[m[K’?
+[0.302s]    77 |         [01;31m[Kcout[m[K << "Error - bad checksum . Got " << received_checksum << "  expected  " << checksum << endl;
+[0.302s]       |         [01;31m[K^~~~[m[K
+[0.302s]       |         [32m[Kstd::cout[m[K
+[0.302s] In file included from [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:2[m[K:
+[0.303s] [01m[K/usr/include/c++/11/iostream:61:18:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::cout[m[K’ declared here
+[0.303s]    61 |   extern ostream [01;36m[Kcout[m[K;          /// Linked to standard output
+[0.303s]       |                  [01;36m[K^~~~[m[K
+[0.303s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:77:101:[m[K [01;31m[Kerror: [m[K‘[01m[Kendl[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::endl[m[K’?
+[0.303s]    77 |         cout << "Error - bad checksum . Got " << received_checksum << "  expected  " << checksum << [01;31m[Kendl[m[K;
+[0.303s]       |                                                                                                     [01;31m[K^~~~[m[K
+[0.303s]       |                                                                                                     [32m[Kstd::endl[m[K
+[0.303s] In file included from [01m[K/usr/include/c++/11/iostream:39[m[K,
+[0.303s]                  from [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:2[m[K:
+[0.304s] [01m[K/usr/include/c++/11/ostream:684:5:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::endl[m[K’ declared here
+[0.304s]   684 |     [01;36m[Kendl[m[K(basic_ostream<_CharT, _Traits>& __os)
+[0.304s]       |     [01;36m[K^~~~[m[K
+[0.304s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:86:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktype[m[K’ was not declared in this scope; did you mean ‘[01m[Kwctype[m[K’?
+[0.304s]    86 |     if ([01;31m[Ktype[m[K != MessageType::MSG_TYPE_BOOL  || type != MessageType::MSG_TYPE_INT8 )  ///TODO ADD ALL TYPES
+[0.304s]       |         [01;31m[K^~~~[m[K
+[0.304s]       |         [32m[Kwctype[m[K
+[0.304s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:88:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcout[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::cout[m[K’?
+[0.304s]    88 |         [01;31m[Kcout[m[K << "Error - not a valid type" << endl;
+[0.304s]       |         [01;31m[K^~~~[m[K
+[0.304s]       |         [32m[Kstd::cout[m[K
+[0.304s] In file included from [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:2[m[K:
+[0.304s] [01m[K/usr/include/c++/11/iostream:61:18:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::cout[m[K’ declared here
+[0.304s]    61 |   extern ostream [01;36m[Kcout[m[K;          /// Linked to standard output
+[0.304s]       |                  [01;36m[K^~~~[m[K
+[0.304s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:88:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kendl[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::endl[m[K’?
+[0.305s]    88 |         cout << "Error - not a valid type" << [01;31m[Kendl[m[K;
+[0.305s]       |                                               [01;31m[K^~~~[m[K
+[0.305s]       |                                               [32m[Kstd::endl[m[K
+[0.305s] In file included from [01m[K/usr/include/c++/11/iostream:39[m[K,
+[0.305s]                  from [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:2[m[K:
+[0.305s] [01m[K/usr/include/c++/11/ostream:684:5:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::endl[m[K’ declared here
+[0.305s]   684 |     [01;36m[Kendl[m[K(basic_ostream<_CharT, _Traits>& __os)
+[0.305s]       |     [01;36m[K^~~~[m[K
+[0.305s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:99:57:[m[K [01;31m[Kerror: [m[K‘[01m[Ktopic_length[m[K’ was not declared in this scope
+[0.306s]    99 |     temp.topic(packet.begin() + 7, packet.begin() + 7 + [01;31m[Ktopic_length[m[K);
+[0.306s]       |                                                         [01;31m[K^~~~~~~~~~~~[m[K
+[0.307s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:[m[K In member function ‘[01m[Kstd::string SerialMessage<T>::toString() const[m[K’:
+[0.307s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/SerialMessage.cpp:129:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ktype[m[K’ was not declared in this scope; did you mean ‘[01m[Kwctype[m[K’?
+[0.307s]   129 |     str += "  Type: " + [01;31m[Ktype[m[K;
+[0.307s]       |                         [01;31m[K^~~~[m[K
+[0.307s]       |                         [32m[Kwctype[m[K
+[0.333s] gmake[2]: *** [CMakeFiles/test_protocol.dir/build.make:90: CMakeFiles/test_protocol.dir/src/SerialMessage.cpp.o] Error 1
+[0.334s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/test_protocol.dir/all] Error 2
+[0.334s] gmake: *** [Makefile:146: all] Error 2
+[0.336s] Invoked command in '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\033[01;32m\]\u@\h: \[\033[34m\]\W\[\033[00;32m\] $(git_branch)\[\033[00m\]$ /usr/bin/cmake --build /home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino -- -j12 -l12

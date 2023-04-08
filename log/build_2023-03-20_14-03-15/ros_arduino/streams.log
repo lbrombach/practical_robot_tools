@@ -1,0 +1,33 @@
+[0.013s] Invoking command in '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\033[01;32m\]\u@\h: \[\033[34m\]\W\[\033[00;32m\] $(git_branch)\[\033[00m\]$ /usr/bin/cmake --build /home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino -- -j12 -l12
+[0.052s] [35m[1mConsolidate compiler generated dependencies of target test_protocol[0m
+[0.071s] [ 33%] [32mBuilding CXX object CMakeFiles/test_protocol.dir/src/SerialMessage.cpp.o[0m
+[0.479s] [ 66%] [32m[1mLinking CXX executable test_protocol[0m
+[0.629s] [100%] Built target test_protocol
+[0.640s] Invoked command in '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\033[01;32m\]\u@\h: \[\033[34m\]\W\[\033[00;32m\] $(git_branch)\[\033[00m\]$ /usr/bin/cmake --build /home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino -- -j12 -l12
+[0.677s] Invoking command in '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\033[01;32m\]\u@\h: \[\033[34m\]\W\[\033[00;32m\] $(git_branch)\[\033[00m\]$ /usr/bin/cmake --install /home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino
+[0.684s] -- Install configuration: ""
+[0.685s] -- Execute custom install script
+[0.685s] -- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ament_index/resource_index/package_run_dependencies/ros_arduino
+[0.694s] -- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ament_index/resource_index/parent_prefix_path/ros_arduino
+[0.702s] -- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ros_arduino/environment/ament_prefix_path.sh
+[0.711s] -- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ros_arduino/environment/ament_prefix_path.dsv
+[0.719s] -- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ros_arduino/environment/path.sh
+[0.728s] -- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ros_arduino/environment/path.dsv
+[0.736s] -- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ros_arduino/local_setup.bash
+[0.745s] -- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ros_arduino/local_setup.sh
+[0.754s] -- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ros_arduino/local_setup.zsh
+[0.763s] -- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ros_arduino/local_setup.dsv
+[0.771s] -- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ros_arduino/package.dsv
+[0.780s] -- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ament_index/resource_index/packages/ros_arduino
+[0.788s] -- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ros_arduino/cmake/ros_arduinoConfig.cmake
+[0.797s] -- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ros_arduino/cmake/ros_arduinoConfig-version.cmake
+[0.805s] -- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/share/ros_arduino/package.xml
+[0.814s] -- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/lib/ros_arduino/test_protocol
+[0.823s] -- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/include/ros_arduino/ros_arduino/Data.h
+[0.832s] -- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/include/ros_arduino/ros_arduino/ROS2Bool.h
+[0.840s] -- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/include/ros_arduino/ros_arduino/ROS2Msg.h
+[0.849s] -- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/include/ros_arduino/ros_arduino/ROS2MsgTypes.h
+[0.857s] -- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/include/ros_arduino/ros_arduino/SerialMessage.h
+[0.865s] -- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/include/ros_arduino/ros_arduino/SerialMessageTypes.h
+[0.873s] -- Symlinking: /home/lloyd/cart_ws/src/practical_robot_tools/install/ros_arduino/include/ros_arduino/ros_arduino/device_manager.h
+[0.884s] Invoked command in '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\033[01;32m\]\u@\h: \[\033[34m\]\W\[\033[00;32m\] $(git_branch)\[\033[00m\]$ /usr/bin/cmake --install /home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino

@@ -1,0 +1,58 @@
+[0.014s] Invoking command in '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\033[01;32m\]\u@\h: \[\033[34m\]\W\[\033[00;32m\] $(git_branch)\[\033[00m\]$ /usr/bin/cmake --build /home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino -- -j12 -l12
+[0.052s] [35m[1mConsolidate compiler generated dependencies of target test_protocol[0m
+[0.073s] [ 50%] [32mBuilding CXX object CMakeFiles/test_protocol.dir/src/ROS2Bool.cpp.o[0m
+[0.073s] [ 50%] [32mBuilding CXX object CMakeFiles/test_protocol.dir/src/test_protocol.cpp.o[0m
+[0.355s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:[m[K In constructor ‘[01m[KROS2Bool<T>::ROS2Bool()[m[K’:
+[0.356s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:11:27:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KROS2Bool<T>[m[K’ does not have any field named ‘[01m[KROS2Msg[m[K’
+[0.356s]    11 | ROS2Bool<T>::ROS2Bool() : [01;31m[KROS2Msg[m[K(MessageType::MSG_TYPE_BOOL, ""), data(false)
+[0.356s]       |                           [01;31m[K^~~~~~~[m[K
+[0.356s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:[m[K In copy constructor ‘[01m[KROS2Bool<T>::ROS2Bool(const ROS2Bool<T>&)[m[K’:
+[0.356s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:16:48:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KROS2Bool<T>[m[K’ does not have any field named ‘[01m[KROS2Msg[m[K’
+[0.356s]    16 | ROS2Bool<T>::ROS2Bool(const ROS2Bool &other) : [01;31m[KROS2Msg[m[K(other), data(other.data) {}
+[0.356s]       |                                                [01;31m[K^~~~~~~[m[K
+[0.356s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:[m[K In constructor ‘[01m[KROS2Bool<T>::ROS2Bool(const string&, bool)[m[K’:
+[0.356s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:20:69:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KROS2Bool<T>[m[K’ does not have any field named ‘[01m[KROS2Msg[m[K’
+[0.357s]    20 | ROS2Bool<T>::ROS2Bool(const std::string &_topic_name, bool _data) : [01;31m[KROS2Msg[m[K(MessageType::MSG_TYPE_BOOL, _topic_name), data(_data)
+[0.357s]       |                                                                     [01;31m[K^~~~~~~[m[K
+[0.358s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:[m[K In member function ‘[01m[Kstd::vector<unsigned char> ROS2Bool<T>::pack()[m[K’:
+[0.358s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:35:12:[m[K [01;31m[Kerror: [m[K‘[01m[Ktemplate<class T> class ROS2Msg[m[K’ used without template arguments
+[0.358s]    35 |     return [01;31m[KROS2Msg[m[K::pack(data);
+[0.358s]       |            [01;31m[K^~~~~~~[m[K
+[0.358s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:[m[K In member function ‘[01m[Kbool ROS2Bool<T>::unpack(const std::vector<unsigned char>&)[m[K’:
+[0.358s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:71:22:[m[K [01;31m[Kerror: [m[K‘[01m[Ktemplate<class T> class ROS2Msg[m[K’ used without template arguments
+[0.358s]    71 |     if (packet[0] != [01;31m[KROS2Msg[m[K::START_SIGNAL[0] ||
+[0.359s]       |                      [01;31m[K^~~~~~~[m[K
+[0.359s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:72:22:[m[K [01;31m[Kerror: [m[K‘[01m[Ktemplate<class T> class ROS2Msg[m[K’ used without template arguments
+[0.359s]    72 |         packet[1] != [01;31m[KROS2Msg[m[K::START_SIGNAL[1] ||
+[0.359s]       |                      [01;31m[K^~~~~~~[m[K
+[0.359s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:73:22:[m[K [01;31m[Kerror: [m[K‘[01m[Ktemplate<class T> class ROS2Msg[m[K’ used without template arguments
+[0.359s]    73 |         packet[2] != [01;31m[KROS2Msg[m[K::START_SIGNAL[2])
+[0.359s]       |                      [01;31m[K^~~~~~~[m[K
+[0.361s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:76:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage_type[m[K’ was not declared in this scope; did you mean ‘[01m[KMessageType[m[K’?
+[0.361s]    76 |         [01;31m[Kmessage_type[m[K = MessageType::MSG_TYPE_NONE;
+[0.361s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[0.361s]       |         [32m[KMessageType[m[K
+[0.363s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:91:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage_type[m[K’ was not declared in this scope; did you mean ‘[01m[KMessageType[m[K’?
+[0.363s]    91 |         [01;31m[Kmessage_type[m[K = MessageType::MSG_TYPE_NONE;
+[0.363s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[0.364s]       |         [32m[KMessageType[m[K
+[0.365s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:100:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage_type[m[K’ was not declared in this scope; did you mean ‘[01m[KMessageType[m[K’?
+[0.365s]   100 |         [01;31m[Kmessage_type[m[K = MessageType::MSG_TYPE_NONE;
+[0.365s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[0.366s]       |         [32m[KMessageType[m[K
+[0.368s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:115:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage_type[m[K’ was not declared in this scope; did you mean ‘[01m[KMessageType[m[K’?
+[0.368s]   115 |     [01;31m[Kmessage_type[m[K = MessageType::MSG_TYPE_BOOL;
+[0.368s]       |     [01;31m[K^~~~~~~~~~~~[m[K
+[0.368s]       |     [32m[KMessageType[m[K
+[0.369s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:116:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktopic[m[K’ was not declared in this scope
+[0.369s]   116 |     [01;31m[Ktopic[m[K = topic_name;
+[0.369s]       |     [01;31m[K^~~~~[m[K
+[0.371s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:[m[K In member function ‘[01m[Kstd::string ROS2Bool<T>::toString() const[m[K’:
+[0.371s] [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/ROS2Bool.cpp:124:12:[m[K [01;31m[Kerror: [m[K‘[01m[Ktopic[m[K’ was not declared in this scope
+[0.371s]   124 |     return [01;31m[Ktopic[m[K + (data ? " true" : " false");
+[0.371s]       |            [01;31m[K^~~~~[m[K
+[0.399s] gmake[2]: *** [CMakeFiles/test_protocol.dir/build.make:90: CMakeFiles/test_protocol.dir/src/ROS2Bool.cpp.o] Error 1
+[0.399s] gmake[2]: *** Waiting for unfinished jobs....
+[2.356s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/test_protocol.dir/all] Error 2
+[2.357s] gmake: *** [Makefile:146: all] Error 2
+[2.359s] Invoked command in '/home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\033[01;32m\]\u@\h: \[\033[34m\]\W\[\033[00;32m\] $(git_branch)\[\033[00m\]$ /usr/bin/cmake --build /home/lloyd/cart_ws/src/practical_robot_tools/build/ros_arduino -- -j12 -l12

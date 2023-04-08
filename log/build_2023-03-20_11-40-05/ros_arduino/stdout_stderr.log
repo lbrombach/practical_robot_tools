@@ -1,0 +1,48 @@
+[35m[1mConsolidate compiler generated dependencies of target test_protocol[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/test_protocol.dir/src/test_protocol.cpp.o[0m
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/test_protocol.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/test_protocol.cpp:12:49:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KSerialMessage<bool>::SerialMessage(const char [10], bool)[m[K’
+   12 |   SerialMessage<bool> testBool("test_bool", true[01;31m[K)[m[K;
+      |                                                 [01;31m[K^[m[K
+In file included from [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/test_protocol.cpp:1[m[K:
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/include/ros_arduino/SerialMessage.h:19:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KSerialMessage<T>::SerialMessage(MessageType, const string&) [with T = bool; std::string = std::__cxx11::basic_string<char>][m[K’
+   19 |     [01;36m[KSerialMessage[m[K(MessageType type, const std::string &topic);
+      |     [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/include/ros_arduino/SerialMessage.h:19:31:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst char [10][m[K’ to ‘[01m[KMessageType[m[K’
+   19 |     SerialMessage([01;36m[KMessageType type[m[K, const std::string &topic);
+      |                   [01;36m[K~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/include/ros_arduino/SerialMessage.h:18:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KSerialMessage<T>::SerialMessage(const SerialMessage<T>&) [with T = bool][m[K’
+   18 |     [01;36m[KSerialMessage[m[K(const SerialMessage &other);
+      |     [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/include/ros_arduino/SerialMessage.h:18:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/include/ros_arduino/SerialMessage.h:17:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KSerialMessage<T>::SerialMessage() [with T = bool][m[K’
+   17 |     [01;36m[KSerialMessage[m[K();
+      |     [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/include/ros_arduino/SerialMessage.h:17:5:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 2 provided
+[01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/test_protocol.cpp:57:21:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kstd::vector<bool, std::allocator<bool> >[m[K’ and ‘[01m[Kbool[m[K’)
+   57 |   resultBool.data = [01;31m[Kfalse[m[K;
+      |                     [01;31m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/vector:68[m[K,
+                 from [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/include/ros_arduino/SerialMessage.h:5[m[K,
+                 from [01m[K/home/lloyd/cart_ws/src/practical_robot_tools/ros_arduino/src/test_protocol.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_bvector.h:736:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<bool, _Alloc>& std::vector<bool, _Alloc>::operator=(const std::vector<bool, _Alloc>&) [with _Alloc = std::allocator<bool>][m[K’
+  736 |       [01;36m[Koperator[m[K=(const vector& __x)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_bvector.h:736:31:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kbool[m[K’ to ‘[01m[Kconst std::vector<bool, std::allocator<bool> >&[m[K’
+  736 |       operator=([01;36m[Kconst vector& __x[m[K)
+      |                 [01;36m[K~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_bvector.h:767:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<bool, _Alloc>& std::vector<bool, _Alloc>::operator=(std::vector<bool, _Alloc>&&) [with _Alloc = std::allocator<bool>][m[K’
+  767 |       [01;36m[Koperator[m[K=(vector&& __x) noexcept(_Bit_alloc_traits::_S_nothrow_move())
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_bvector.h:767:26:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kbool[m[K’ to ‘[01m[Kstd::vector<bool, std::allocator<bool> >&&[m[K’
+  767 |       operator=([01;36m[Kvector&& __x[m[K) noexcept(_Bit_alloc_traits::_S_nothrow_move())
+      |                 [01;36m[K~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_bvector.h:792:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<bool, _Alloc>& std::vector<bool, _Alloc>::operator=(std::initializer_list<bool>) [with _Alloc = std::allocator<bool>][m[K’
+  792 |       [01;36m[Koperator[m[K=(initializer_list<bool> __l)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_bvector.h:792:40:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kbool[m[K’ to ‘[01m[Kstd::initializer_list<bool>[m[K’
+  792 |       operator=([01;36m[Kinitializer_list<bool> __l[m[K)
+      |                 [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+gmake[2]: *** [CMakeFiles/test_protocol.dir/build.make:76: CMakeFiles/test_protocol.dir/src/test_protocol.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/test_protocol.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
