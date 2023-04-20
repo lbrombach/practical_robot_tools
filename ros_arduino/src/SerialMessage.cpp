@@ -1,5 +1,4 @@
 #include "ros_arduino/SerialMessage.h"
-#include "ros_arduino/serialization.h"
 #include <iostream>
 
 using namespace std;
@@ -53,6 +52,10 @@ std::vector<uint8_t> SerialMessage<T>::pack()
 {
     std::vector<uint8_t> packet;
     packet.insert(packet.end(), SerialMessage::START_SIGNAL, SerialMessage::START_SIGNAL + 3);
+    //msg format is: start_signal(3 bytes) + msgLength (2 bytes) + type(2 bytes) + topic_length(2 bytes) + topic(n bytes) + data_length(2 bytes) + data(n bytes) + checksum(2 bytes)
+    uint16_t msgLength = 3 + 2 + 2 + 2 + topic.length() + 2 + data.size() * getNumBytesPerElement(type) + 2;
+    packet.push_back((msgLength >> 8) & 0xff); // high byte first
+    packet.push_back(msgLength & 0xff);        // low byte second
     uint16_t _type = (uint16_t)type;
     packet.push_back((_type >> 8) & 0xff); // high byte first
     packet.push_back(_type & 0xff);        // low byte second
@@ -65,9 +68,9 @@ std::vector<uint8_t> SerialMessage<T>::pack()
         serialize<T>(type, data, packet);
 
     uint16_t checksum = 0;
-    for (auto i : packet)
+    for (int i = 5; i < packet.size(); i++)
     {
-        checksum += i;
+        checksum += packet[i];
     }
 
     packet.push_back((checksum >> 8) & 0xff);
@@ -85,13 +88,28 @@ SerialMessage<T> SerialMessage<T>::unpack(const std::vector<uint8_t> &packet)
         packet[2] != SerialMessage::START_SIGNAL[2])
     {
         std::cout << "Error - bad packet start" << std::endl;
+        // output the packet
+        for (int i = 0; i < packet.size(); i++)
+        {
+            std::cout << std::hex << (int)packet[i] << " ";
+        }
+        std::cout << std::endl<<"*************************************"<<std::endl;;
+
+        temp.type = MessageType::MSG_TYPE_NONE;
+    }
+
+    uint16_t msgLength = ((uint16_t)packet[3] << 8) | (uint16_t)packet[4];
+    cout<<"msgLength: "<<msgLength<<endl;
+    if (msgLength != packet.size())
+    {
+        std::cout << "Error - bad packet length. Got " << packet.size() << "  expected  " << msgLength << std::endl;
         temp.type = MessageType::MSG_TYPE_NONE;
     }
 
     // Verify checksum
     uint16_t checksum = 0;
     int packetSize = packet.size();
-    for (int i = 0; i < packet.size() - 2; i++)
+    for (int i = 5; i < packet.size() - 2; i++)
     {
         checksum += packet[i];
     }
@@ -104,8 +122,9 @@ SerialMessage<T> SerialMessage<T>::unpack(const std::vector<uint8_t> &packet)
         temp.type = MessageType::MSG_TYPE_NONE;
     }
 
+    
     // Check message type
-    uint16_t _type = ((uint16_t)packet[3] << 8) | (uint16_t)packet[4];
+    uint16_t _type = ((uint16_t)packet[5] << 8) | (uint16_t)packet[6];
 
     switch (_type & 0xff)
     {
@@ -135,19 +154,22 @@ SerialMessage<T> SerialMessage<T>::unpack(const std::vector<uint8_t> &packet)
     }
 
     // Read topic length and topic name
-    int topic_length = ((uint16_t)packet[5] << 8) | (uint16_t)packet[6];
+    int topic_length = ((uint16_t)packet[7] << 8) | (uint16_t)packet[8];
 
-    temp.topic = std::string(packet.begin() + 7, packet.begin() + 7 + topic_length);
+    temp.topic = std::string(packet.begin() + 9, packet.begin() + 9 + topic_length);
 
     // Read data length and data
-    int data_length = ((uint16_t)packet[7 + topic_length] << 8) | (uint16_t)packet[7 + topic_length + 1];
-    int dataStart = 7 + topic_length + 2;
+    int data_length = ((uint16_t)packet[9 + topic_length] << 8) | (uint16_t)packet[9 + topic_length + 1];
+    int dataStart = 9 + topic_length + 2;
 
     if(type != MessageType::MSG_TYPE_EMPTY)
         unserialize(temp.type, temp.data, packet, dataStart, data_length);
 
     return temp;
 }
+
+
+
 
 template <class T>
 void SerialMessage<T>::show() const

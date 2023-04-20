@@ -1,6 +1,8 @@
 #include "ros_arduino/SerialMessage.h"
 #include "ros_arduino/SerialMessageTypes.h"
 #include <rclcpp/rclcpp.hpp>
+#include "std_msgs/msg/u_int8_multi_array.hpp"
+
 
 using namespace std;
 

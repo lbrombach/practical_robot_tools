@@ -6,6 +6,8 @@
 #include <stdint.h>
 
 #include "ros_arduino/SerialMessageTypes.h"
+#include "ros_arduino/serialization.h"
+#include "std_msgs/msg/u_int8_multi_array.hpp"
 
 // The base class for ROS2 messages for a custom communication format
 template <class T>

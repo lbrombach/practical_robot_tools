@@ -1,15 +1,6 @@
-#ifndef SERIALIZATION_H
-#define SERIALIZATION_H
+#include "serialization.h"
 
-#include <vector>
-#include <stdint.h>
-#include "SerialMessageTypes.h"
-#include <iostream>
-
-
-using namespace std;
-
-const int getNumBytesPerElement(MessageType type)
+inline int getNumBytesPerElement(MessageType type)
 {
     switch (type)
     {
@@ -49,7 +40,6 @@ template <typename T>
 bool serialize(MessageType type, std::vector<T> &data, std::vector<uint8_t> &packet)
 {
     int numBytesPerData = getNumBytesPerElement(type);
-   //// cout<< "numBytesPerData: " << numBytesPerData << endl;
     uint16_t data_length = data.size() * numBytesPerData;
     packet.push_back((data_length >> 8) & 0xff); // high byte first
     packet.push_back(data_length & 0xff);        // low byte second
@@ -67,7 +57,6 @@ bool serialize(MessageType type, std::vector<T> &data, std::vector<uint8_t> &pac
         if (numBytesPerData >= 1)
         {
             packet.push_back(i & 0xff); // low byte last
-   ////         cout<<(int)packet.back()<< " ";
         }
     }
     return true;
@@ -108,8 +97,18 @@ bool unserialize(MessageType type, std::vector<T> &data, std::vector<uint8_t> pa
 
         data.push_back(d);
     }
-  ////  cout<<endl;
     return true;
 }
 
-#endif
+
+template bool serialize(MessageType type, std::vector<bool> &data, std::vector<uint8_t> &packet);
+template bool serialize(MessageType type, std::vector<uint8_t> &data, std::vector<uint8_t> &packet);
+template bool serialize(MessageType type, std::vector<int8_t> &data, std::vector<uint8_t> &packet);
+template bool serialize(MessageType type, std::vector<int16_t> &data, std::vector<uint8_t> &packet);
+template bool serialize(MessageType type, std::vector<int32_t> &data, std::vector<uint8_t> &packet);
+
+template bool unserialize<bool>(MessageType type, std::vector<bool> &data, std::vector<uint8_t> packet, int start, int numBytes);
+template bool unserialize<uint8_t>(MessageType type, std::vector<uint8_t> &data, std::vector<uint8_t> packet, int start, int numBytes);
+template bool unserialize<int8_t>(MessageType type, std::vector<int8_t> &data, std::vector<uint8_t> packet, int start, int numBytes);
+template bool unserialize<int16_t>(MessageType type, std::vector<int16_t> &data, std::vector<uint8_t> packet, int start, int numBytes);
+template bool unserialize<int32_t>(MessageType type, std::vector<int32_t> &data, std::vector<uint8_t> packet, int start, int numBytes);
